@@ -12,54 +12,51 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <!--Main CSS file-->
-    <link rel="stylesheet" href="css/styling.css">
+    <link rel="stylesheet" href="styling.css">
+    <!--JQuery Source-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 
-<body id="top-of-page">
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-        <div class="navbar_container">
-            <a href="#top-of-page" class="navbar-logo">MG Systems Inc.</a>
-            <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <div class="navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-menu">
-                    <li class="nav-item"><a href="" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
-                </ul>
+<body id="page-top">
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#page-top"><img src="images/mg_systems_logo2.png" alt="MG Systems Small Logo">&nbsp;MG Systems Inc.</a></div>
+            <ul class="menu">
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
-    <!--Masthead-->
-    <header class="masthead">
-        <div class="masthead_container px-4 px-lg-5 h-100">
-            <div class="masthead_row gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-8 align-self-end">
-                    <h1 class="text-white font-weight-bold">MG Systems Inc.</h1>
-                    <hr class="divider" />
-                </div>
-                <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">[Breif, one sentence description about MG Systems.]</p>
-                    <a href="" class="btn btn-primary btn-xl">Find Out More</a>
+    <!--Masthead Section-->
+    <section class="masthead" id="masthead">
+        <div class="max-width">
+            <div class="masthead-content">
+                <div class="text-1">Welcome To</div>
+                <div class="text-2">MG SYSTEMS INC.</div>
+                <div style="border-top: 5px solid rgb(37, 37, 255);"></div>
+                <a href="#">Find Out More</a>
+            </div>
+        </div>
+    </section>
+
+    <!--About Section-->
+    <div class="about" id="about">
+        <div class="max-width">
+            <div class="about-content">
+                <div class="column left">
+                    <img src="images/mg_systems_inc_logo.png" alt="MG Systems Logo">
                 </div>
             </div>
         </div>
-    </header>
-
-    <!--About-->
-    <section class="page-section bg-primary" id="about">
-        
-    </section>
+    </div>
 
     <!--Main JS file-->
     <script src="js/web-app.js"></script>
-    <!--Bootstrap src-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
