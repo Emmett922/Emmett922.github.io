@@ -1,7 +1,9 @@
+/* # Google fonts import # */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;1,300;1,400;1,500;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
 }
@@ -13,6 +15,7 @@
 }
 
 
+
 /* ### Navbar Styling ### */
 .navbar {
     position: fixed;
@@ -20,6 +23,7 @@
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
+    z-index: 999;
 }
 
 .navbar.sticky {
@@ -35,15 +39,17 @@
 
 .navbar .logo a {
     color: white;
-    /*-webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: white;
-    -webkit-text-stroke-width: 1px;*/
     font-size: 35px;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navbar .logo img {
+    height: 60px;
 }
 
 .navbar .menu li {
@@ -68,7 +74,7 @@
     color: white;
 }
 
-/* ### Menu btn styling ### */
+/* ### Menu Button Styling ### */
 .menu-btn {
     color: white;
     font-size: 23px;
@@ -101,6 +107,7 @@
 .masthead .masthead-content .text-2 {
     font-size: 75px;
     font-weight: 600;
+    font-family: 'Poppins', sans-serif;
     margin-left: -3px;
 }
 
@@ -123,10 +130,144 @@
 }
 
 
+
+/* ### Related Content Styling ### */
+section{
+    padding: 100px 0;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: black;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(24, 24, 179);
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+
+
+/* ### About Section Styling ### */
+.about, .services {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content, .services-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 425px;
+    object-fit: cover;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: white;
+    background: rgb(37, 37, 255);
+    border: 2px solid rgb(37, 37, 255);
+}
+
+
+
+/* ### Services Section Styling ### */
+.services .max-width {
+    max-width: 1800px;
+}
+
+.services .services-content .card {
+    width: (33% - 20px);
+    color: white;
+    background: rgb(31,31,31);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+}
+
+.services .services-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.services .services-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.services .services-content .card i {
+    font-size: 50px;
+    color: rgb(37, 37, 255);
+}
+
+.services .services-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+
 /* ### Responsive media styling ### */
-@media (max-width: 1104px) {
+@media (max-width: 1300px) {
     .masthead .max-width {
         margin-left: 0px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .about .about-content .left img {
+        height: 325px;
+        width: 350px;
     }
 }
 
@@ -156,7 +297,7 @@
         width: 100%;
         left: -100%;
         top: 0;
-        background: #111;
+        background: rgb(61,61,61);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -183,6 +324,24 @@
     .masthead .masthead-content a {
         font-size: 23px;
         padding: 10px 30px;
+    }
+
+    .max-width {
+        max-width: 800px;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
     }
 }
 
