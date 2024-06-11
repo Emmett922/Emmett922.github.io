@@ -273,19 +273,19 @@ section .title::after {
 }
 
 /* ## Services Description Styling */
-.services .services-content .card .transparent-overlay {
+.services .services-content .transparent-overlay {
     position: fixed;
     height: 100%;
     width: 100%;
     top: -100%;
-    z-index: 1000;
     left: 0;
+    z-index: 1000;
     background: rgba(0,0,0,.1);
     text-align: center;
     transition: all 0.3s ease;
 }
 
-.services .services-content .card .serv-descr {
+.services .services-content .serv-descr {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -304,11 +304,11 @@ section .title::after {
     pointer-events: none;
 }
 
-.services .services-content .card .transparent-overlay.active {
+.services .services-content .transparent-overlay.active {
     top: 0;
 }
 
-.services .services-content .card .serv-descr.active {
+.services .services-content .serv-descr.active {
     top: 0;
     height: 90%;
     width: 60%;
@@ -317,7 +317,7 @@ section .title::after {
     margin-top: 2%;
 }
 
-.services .services-content .card .serv-descr .close-btn {
+.services .services-content .serv-descr .close-btn {
     pointer-events: all;
     cursor: pointer;
     font-size: 40px;
@@ -326,16 +326,12 @@ section .title::after {
     margin-right: 10px;
 }
 
-/* Removing previous hover actions when card is active */
-.services .services-content .card.active:hover {
-    background: rgb(31,31,31);
+.services .services-content .serv-descr .serv-descr-content {
+    padding-top: 50px;
 }
 
-.services .services-content .card.active:hover .box {
-    transform: scale(1);
-}
-
-.services .services-content .card.active:hover i {
+.services .services-content .serv-descr .serv-descr-content i {
+    font-size: 50px;
     color: rgb(37, 37, 255);
 }
 

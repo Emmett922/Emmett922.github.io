@@ -27,34 +27,20 @@ $(document).ready(function() {
 
     // -- Toggle Services Description pop-up -- //
     // Opening pop-up
-    $('.services .services-content .card').click(function() {
-        var id = this.id;
+    $('.services .services-content .card').click(function(event) {
         $('.services .services-content .card').toggleClass("active");
-        $('.services .services-content .card .serv-descr').toggleClass("active");
-        $('.services .services-content .card .transparent-overlay').toggleClass("active");
+        $('.services .services-content .serv-descr').toggleClass("active");
+        $('.services .services-content .transparent-overlay').toggleClass("active");
 
-        // Changes Description icon based on the chosen service
-        if ('.services .services-content .card .serv-descr #surveillance') {
-            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
-        }
-        if ('.services .services-content .card .serv-descr #surveillance') {
-            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
-        }
-        if ('.services .services-content .card .serv-descr #surveillance') {
-            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
-        }
-        if ('.services .services-content .card .serv-descr #surveillance') {
-            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
-        }
-        if ('.services .services-content .card .serv-descr #surveillance') {
-            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
+        if (event.currentTarget.id == 'surveillance') {
+
         }
     });
 
     // Closing pop-up
-    $('.services .services-content .card .serv-descr.active .close-btn').click(function() {
+    $('.services .services-content .serv-descr .close-btn').click(function() {
         $('.services .services-content .card').toggleClass("active");
-        $('.services .services-content .card .serv-descr').toggleClass("active");
-        $('.services .services-content .card .transparent-overlay').toggleClass("active");
+        $('.services .services-content .serv-descr').toggleClass("active");
+        $('.services .services-content .transparent-overlay').toggleClass("active");
     });
 });
