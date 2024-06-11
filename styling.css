@@ -171,11 +171,11 @@ section .title::after {
 
 
 /* ### About Section Styling ### */
-.about, .services {
+.about, .services, .events {
     font-family: 'Poppins', sans-serif;
 }
 
-.about .about-content, .services-content {
+.about .about-content, .services .services-content, .events .events-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -272,7 +272,7 @@ section .title::after {
     margin: 10px 0 7px 0;
 }
 
-/* ## Services Description Styling */
+/* ## Services Description Styling ## */
 .services .services-content .transparent-overlay {
     position: fixed;
     height: 100%;
@@ -359,6 +359,13 @@ section .title::after {
     color: white;
     background: rgb(37, 37, 255);
     border: 2px solid rgb(37, 37, 255);
+}
+
+
+
+/* ### Events Section Styling ### */
+.events .events-content {
+
 }
 
 
