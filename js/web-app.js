@@ -32,8 +32,26 @@ $(document).ready(function() {
         $('.services .services-content .serv-descr').toggleClass("active");
         $('.services .services-content .transparent-overlay').toggleClass("active");
 
+        // Description Content changes based on chosen card
         if (event.currentTarget.id == 'surveillance') {
-
+            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-video');
+            $('.services .services-content .serv-descr .serv-descr-content h2').html('Surveillance');
+        }
+        if (event.currentTarget.id == 'home-theater') {
+            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-clapperboard');
+            $('.services .services-content .serv-descr .serv-descr-content h2').html('Home Theater');
+        }
+        if (event.currentTarget.id == 'audio-visual') {
+            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-headphones');
+            $('.services .services-content .serv-descr .serv-descr-content h2').html('Audio/Visual');
+        }
+        if (event.currentTarget.id == 'streaming') {
+            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-display');
+            $('.services .services-content .serv-descr .serv-descr-content h2').html('Streaming');
+        }
+        if (event.currentTarget.id == 'live-music') {
+            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-music');
+            $('.services .services-content .serv-descr .serv-descr-content h2').html('Live Music');
         }
     });
 
