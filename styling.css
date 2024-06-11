@@ -222,18 +222,30 @@ section .title::after {
 
 
 /* ### Services Section Styling ### */
+.services {
+    background-color: rgb(50,50,50);
+    color: white;
+}
+
+.services .title::before {
+    background: white;
+}
+
 .services .max-width {
-    max-width: 1800px;
+    max-width: 1500px;
 }
 
 .services .services-content .card {
-    width: (33% - 20px);
-    color: white;
+    width: (50% - 20px);
     background: rgb(31,31,31);
     text-align: center;
     border-radius: 6px;
-    padding: 20px 25px;
+    padding: 75px 50px;
     cursor: pointer;
+}
+
+.services .services-content .card:hover {
+    background: rgb(37, 37, 255);
 }
 
 .services .services-content .card .box {
@@ -247,6 +259,11 @@ section .title::after {
 .services .services-content .card i {
     font-size: 50px;
     color: rgb(37, 37, 255);
+    transition: color 0.3s ease;
+}
+
+.services .services-content .card:hover i {
+    color: white;
 }
 
 .services .services-content .card .text {
@@ -343,6 +360,11 @@ section .title::after {
     .about .about-content .right {
         flex: 100%;
     }
+
+    .services .services-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 724px) {
@@ -357,6 +379,10 @@ section .title::after {
     .masthead .masthead-content a {
         font-size: 20px;
         padding: 9px 25px;
+    }
+
+    .services .services-content .card {
+        width: 100%;
     }
 }
 
