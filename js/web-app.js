@@ -28,9 +28,27 @@ $(document).ready(function() {
     // -- Toggle Services Description pop-up -- //
     // Opening pop-up
     $('.services .services-content .card').click(function() {
+        var id = this.id;
         $('.services .services-content .card').toggleClass("active");
         $('.services .services-content .card .serv-descr').toggleClass("active");
         $('.services .services-content .card .transparent-overlay').toggleClass("active");
+
+        // Changes Description icon based on the chosen service
+        if ('.services .services-content .card .serv-descr #surveillance') {
+            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
+        }
+        if ('.services .services-content .card .serv-descr #surveillance') {
+            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
+        }
+        if ('.services .services-content .card .serv-descr #surveillance') {
+            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
+        }
+        if ('.services .services-content .card .serv-descr #surveillance') {
+            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
+        }
+        if ('.services .services-content .card .serv-descr #surveillance') {
+            $('.services .services-content .card .serv-descr i').attr('class', 'fa-solid fa-video');
+        }
     });
 
     // Closing pop-up

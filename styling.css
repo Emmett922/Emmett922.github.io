@@ -28,7 +28,7 @@
 
 .navbar.sticky {
     padding: 15px 0;
-    background: darkblue;
+    background: rgb(0, 0, 100);
 }
 
 .navbar .max-width {
@@ -270,10 +270,6 @@ section .title::after {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
-}
-
-.services .services-content #surveillance {
-    padding: 75px 100px;
 }
 
 /* ## Services Description Styling */
