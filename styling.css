@@ -272,6 +272,40 @@ section .title::after {
     margin: 10px 0 7px 0;
 }
 
+.services .services-content .card .serv-descr {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.services .services-content .card.active {
+    pointer-events: none;
+}
+
+.services .services-content .card .serv-descr.active {
+    top: 0;
+    height: 90%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.services .services-content .card .serv-descr .close {
+    pointer-events: all;
+    cursor: pointer;
+}
+
 
 
 /* ### Responsive media styling ### */
