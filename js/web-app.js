@@ -1,12 +1,26 @@
 $(document).ready(function() {
     // --- Page scrolling navbar changes --- //
+    // Main Navbar changes
     $(window).scroll(function() {
         if (this.scrollY > 20) {
             $('.navbar').addClass("sticky");
         }else {
             $('.navbar').removeClass("sticky");
         }
+
+        if(this.scrollY > 500) {
+            $('.scroll-up-btn').addClass("show");
+        }else {
+            $('.scroll-up-btn').removeClass("show");
+        }
     });
+
+    // Slide-Up on ^ button
+    $('.scroll-up-btn').click(function() {
+        $('html').animate({scrollTop: 0});
+    });
+
+
 
     // -- Smooth Scrolling on Anchor Link Clicks -- //
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -19,11 +33,14 @@ $(document).ready(function() {
         });
     });
 
+
+
     // -- Toggle Menu/Navbar -- //
     $('.menu-btn, .menu li a').click(function() {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+
 
 
     // -- Toggle Services Description pop-up -- //
@@ -64,6 +81,7 @@ $(document).ready(function() {
     });
 
 
+
     // -- Redirecting to Other Sites -- //
     // Event Section Actions
     $('.events .events-content .left img').click(function() {
@@ -75,7 +93,4 @@ $(document).ready(function() {
         window.open('https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios');
         return false;
     });
-
-
-    // -- Form submission -- //
 });
