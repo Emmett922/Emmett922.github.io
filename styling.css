@@ -86,7 +86,7 @@
     position: fixed;
     height: 45px;
     width: 42px;
-    background: blue;
+    background: darkblue;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -421,11 +421,13 @@ section .title::after {
     transition: opacity ease-in-out 0.3s;
 }
 
-.events .events-content .left .item .event-link .hover-overlay a {
+.events .events-content .left .item .event-link .hover-overlay .overlay-content {
     display: inline-block;
+    text-align: center;
+    margin: 0 auto;
     background: none;
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
@@ -433,13 +435,15 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
+.events .events-content .left:hover {
+    margin-top: -50px;
+}
+
 .events .events-content .left .item .event-link .hover-overlay:hover {
     opacity: 1;
 }
 
-.events .events-content .left:hover {
-    margin-top: -50px;
-}
+
 
 /* Right Column */
 .events .events-content .right {
@@ -470,6 +474,20 @@ section .title::after {
     border-radius: 10px;
     opacity: 0;
     transition: opacity ease-in-out 0.3s;
+}
+
+.events .events-content .right .item .event-link .hover-overlay .overlay-content {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    background: none;
+    color: white;
+    font-size: 20px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
 }
 
 .events .events-content .right .item .event-link .hover-overlay:hover {
