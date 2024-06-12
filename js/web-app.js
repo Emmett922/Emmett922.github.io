@@ -20,10 +20,11 @@ $(document).ready(function() {
     });
 
     // -- Toggle Menu/Navbar -- //
-    $('.menu-btn').click(function() {
+    $('.menu-btn, .menu li a').click(function() {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+
 
     // -- Toggle Services Description pop-up -- //
     // Opening pop-up
@@ -56,9 +57,15 @@ $(document).ready(function() {
     });
 
     // Closing pop-up
-    $('.services .services-content .serv-descr .close-btn').click(function() {
+    $('.services .services-content .serv-descr .close-btn, .services .services-content .serv-descr .serv-descr-content a').click(function() {
         $('.services .services-content .card').toggleClass("active");
         $('.services .services-content .serv-descr').toggleClass("active");
         $('.services .services-content .transparent-overlay').toggleClass("active");
+    });
+
+    // Event Section Actions
+    $('.events .events-content .left img').click(function() {
+        window.open('https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios');
+        return false;
     });
 });

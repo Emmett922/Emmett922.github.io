@@ -280,7 +280,7 @@ section .title::after {
     top: -100%;
     left: 0;
     z-index: 1000;
-    background: rgba(0,0,0,.2);
+    background: rgba(0,0,0,.3);
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -364,8 +364,17 @@ section .title::after {
 
 
 /* ### Events Section Styling ### */
-.events .events-content {
+.events .events-content .left {
+    text-align: center;
+}
 
+.events .events-content .left img {
+    margin-top: 10px;
+    height: 600px;
+    width: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 
@@ -382,11 +391,29 @@ section .title::after {
         height: 325px;
         width: 350px;
     }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 2%;
+    }
 }
 
 @media (max-width: 991px) {
     .max-width {
         padding: 0 50px;
+    }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 2%;
     }
 }
 
@@ -461,6 +488,15 @@ section .title::after {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 2%;
+    }
 }
 
 @media (max-width: 724px) {
@@ -480,10 +516,28 @@ section .title::after {
     .services .services-content .card {
         width: 100%;
     }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+    }
 }
 
 @media (max-width: 579px) {
     .masthead .masthead-content .text-2 {
         font-size: 50px;
+    }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
     }
 }
