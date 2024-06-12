@@ -495,12 +495,20 @@ section .title::after {
 .contact .contact-content .info .head a {
     text-decoration: none;
     color: white;
+}
+
+.contact .contact-content #facebook:hover {
+    text-decoration: underline;
     cursor: pointer;
 }
 
 .contact .contact-content .info .sub-title a {
     text-decoration: none;
     color: white;
+}
+
+.contact .contact-content #insta:hover {
+    text-decoration: underline;
     cursor: pointer;
 }
 
