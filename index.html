@@ -133,16 +133,29 @@
             <div class="events-content">
                 <div class="column left">
                     <h3 class="sub-title">Upcoming</h3>
-                    <img src="images/upcoming_event.png" alt="upcoming_event">
                     <br>
-                    <a href="https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank">More Info</a>
+                    <div class="item">
+                        <a class="event-link" href="https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank">
+                            <div class="hover-overlay">
+                                <div class="overlay-content">
+                                </div>
+                            </div>
+                            <img src="images/upcoming_event.png" alt="upcoming_event">
+                        </a>
+                    </div>
                 </div>
-                <div class="img-overlay"></div>
                 <div class="column right">
                     <h3 class="sub-title">Book an Event</h3>
-                    <img src="images/the_entertainment_band_&_friends.jpg" alt="upcoming_event">
                     <br>
-                    <a href="https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank">Visit</a>
+                    <div class="item">
+                        <a class="event-link" href="https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios" target="_blank">
+                            <div class="hover-overlay">
+                                <div class="overlay-conten">
+                                </div>
+                            </div>
+                            <img src="images/the_entertainment_band_&_friends.jpg" alt="upcoming_event">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,7 +208,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message Us</div>
-                    <form method="POST" action="https://formsubmit.co/emmett.peters922@gmail.com" name="contact-form">
+                    <form method="post" action="" name="contact-form">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" name="Name" placeholder="Name" onclick="this.select()" required>
@@ -214,15 +227,6 @@
                             <textarea cols="30" rows="10" name="Message" placeholder="Your Message..." onclick="this.select()" required></textarea>
                         </div>
                         <div class="button">
-                            <!--Form Submission Email Subject-->
-                            <input type="hidden" name="_subject" value="New submission from mgsystemsinc.com!">
-
-                            <!--Form Submission Table Design Email-->
-                            <input type="hidden" name="_template" value="table">
-
-                            <!--Email to user-->
-                            <input type="hidden" name="_autoresponse" value="Your message has been sent to MG Systems Inc.!">
-
                             <button type="submit" id="submit-btn">Send Message</button>
                         </div>
                     </form>

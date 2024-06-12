@@ -394,38 +394,65 @@ section .title::after {
     text-align: center;
     cursor: pointer;
     padding-left: 53px;
+    margin-top: -25px;
+}
+
+.events .events-content .left .item {
+    margin-top: -15px;
 }
 
 .events .events-content .left img {
-    margin-top: 10px;
     height: 600px;
     width: 420px;
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
-    z-index: 1;
 }
 
-.events .events-content .left a {
+.events .events-content .left .item .event-link .hover-overlay {
+    display: flex;
+    position: absolute;
+    height: 600px;
+    width: 420px;
+    background-image: linear-gradient(to top, rgba(0,0,255,0.65) 0%, rgba(0,0,139,0.65) 100%);
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s;
+}
+
+.events .events-content .left .item .event-link .hover-overlay a {
     display: inline-block;
     background: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: -5px;
+    color: white;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid black;
+    border: 2px solid white;
     transition: all 0.3s ease;
 }
 
+.events .events-content .left .item .event-link .hover-overlay:hover {
+    opacity: 1;
+}
+
+.events .events-content .left:hover {
+    margin-top: -50px;
+}
+
+/* Right Column */
 .events .events-content .right {
     text-align: center;
     cursor: pointer;
+    margin-top: -25px;
+}
+
+.events .events-content .right .item {
+    margin-top: -15px;
 }
 
 .events .events-content .right img {
-    margin-top: 10px;
     height: 600px;
     width: 475px;
     object-fit: cover;
@@ -433,38 +460,24 @@ section .title::after {
     cursor: pointer;
 }
 
-/* Right Column */
-.events .events-content .right a {
-    display: inline-block;
-    background: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 10px 30px;
-    margin-top: -5px;
-    border-radius: 6px;
-    border: 2px solid black;
-    transition: all 0.3s ease;
+.events .events-content .right .item .event-link .hover-overlay {
+    display: flex;
+    position: absolute;
+    height: 600px;
+    width: 475px;
+    background-image: linear-gradient(to top, rgba(0,0,255,0.65) 0%, rgba(0,0,139,0.65) 100%);
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s;
 }
 
-.events .events-content .left:hover {
-    margin-top: -30px;
+.events .events-content .right .item .event-link .hover-overlay:hover {
+    opacity: 1;
 }
 
 .events .events-content .right:hover {
-    margin-top: -30px;
-}
-
-.events .events-content .left a:hover {
-    color: white;
-    background: rgb(37, 37, 255);
-    border: 2px solid rgb(37, 37, 255);
-}
-
-.events .events-content .right a:hover {
-    color: white;
-    background: rgb(37, 37, 255);
-    border: 2px solid rgb(37, 37, 255);
+    margin-top: -50px;
 }
 
 
@@ -680,7 +693,7 @@ footer span a:hover {
         position: fixed;
         height: 100vh;
         width: 100%;
-        left: -100%;
+        left: 100%;
         top: 0;
         background: rgb(61,61,61);
         text-align: center;
