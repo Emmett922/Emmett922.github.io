@@ -136,6 +136,17 @@ section{
     padding: 100px 0;
 }
 
+.about, .services, .events, .contact, footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content, .services .services-content, .events .events-content, .contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 section .title {
     position: relative;
     text-align: center;
@@ -171,17 +182,6 @@ section .title::after {
 
 
 /* ### About Section Styling ### */
-.about, .services, .events, .contact {
-    font-family: 'Poppins', sans-serif;
-}
-
-.about .about-content, .services .services-content, .events .events-content, .contact .contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .about .about-content .left {
     width: 45%;
 }
@@ -479,14 +479,6 @@ section .title::after {
     align-items: center;
 }
 
-.contact .contact-content #facebook {
-    cursor: pointer;
-}
-
-.contact .contact-content #insta {
-    cursor: pointer;
-}
-
 .contact .contact-content .row .info {
     margin-left: 30px;
 }
@@ -498,6 +490,18 @@ section .title::after {
 
 .contact .contact-content .info .head {
     font-weight: 501;
+}
+
+.contact .contact-content .info .head a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.contact .contact-content .info .sub-title a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
 
 .contact .right form .fields {
@@ -561,6 +565,26 @@ section .title::after {
 .contact .right form .button button:hover {
     border: 2px solid rgb(37, 37, 255);
     background: rgb(37, 37, 255);
+}
+
+
+
+/* ### Footer Section Styling ### */
+footer {
+    background-color: rgb(50,50,50);
+    color: white;
+    padding: 20px 23px;
+    text-align: center;
+    font-size: 15px;
+}
+
+footer span a {
+    color: white;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
 }
 
 
@@ -684,6 +708,11 @@ section .title::after {
         margin-left: 20%;
         margin-right: 20%;
         margin-top: 2%;
+    }
+
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
     }
 }
 

@@ -176,15 +176,15 @@
                         <div class="row" id="facebook">
                             <i class="fa-brands fa-facebook"></i>
                             <div class="info">
-                                <div class="head">Facebook</div>
-                                <div class="sub-title">@mgsystemsinc</div>
+                                <div class="head"><a href="https://www.facebook.com/mgsystemsincorp/?locale=ms_MY&_rdr">Facebook</a></div>
+                                <div class="sub-title"><a href="https://www.facebook.com/mgsystemsincorp/?locale=ms_MY&_rdr">@mgsystemsinc</a></div>
                             </div>
                         </div>
                         <div class="row" id="insta">
                             <i class="fa-brands fa-instagram"></i>
                             <div class="info">
-                                <div class="head">Instagram</div>
-                                <div class="sub-title">@mgsystemsinc</div>
+                                <div class="head"><a href="https://www.instagram.com/mgsystemsinc/">Instagram</a></div>
+                                <div class="sub-title"><a href="https://www.instagram.com/mgsystemsinc/">@mgsystemsinc</a></div>
                             </div>
                         </div>
                     </div>
@@ -194,29 +194,34 @@
                     <form action="#">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" id="name" placeholder="Name" onclick="this.select()" required>
                             </div>
                             <div class="field phone">
-                                <input type="text" placeholder="Phone">
+                                <input type="text" placeholder="Phone" onclick="this.select()">
                             </div>
                         </div>
                         <div class="field email">
-                            <input type="email" placeholder="Email" required>
+                            <input type="email" id="email" placeholder="Email" onclick="this.select()" required>
                         </div>
                         <div class="field subject">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" id="sbj" placeholder="Subject" onclick="this.select()" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Your Message..." required></textarea>
+                            <textarea cols="30" rows="10" id="mesg" placeholder="Your Message..." onclick="this.select()" required></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">Send Message</button>
+                            <button type="submit" id="submit-btn">Send Message</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <!--Foot Section-->
+    <footer>
+        <span>Copyright <span class="far fa-copyright"></span>&nbsp;<a href="">MG Systems Inc.</a> | 2024 All Rights Reserved</span>
+    </footer>
 
     <!--Main JS file-->
     <script src="js/web-app.js"></script>

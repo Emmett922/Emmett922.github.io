@@ -76,14 +76,6 @@ $(document).ready(function() {
         return false;
     });
 
-    // Contact Us Social Media Link Actions
-    ('.contact .contact-content .left #facebook').click(function() {
-        window.open('https://www.facebook.com/mgsystemsincorp/?locale=ms_MY&_rdr');
-        return false;
-    });
 
-    ('.contact .contact-content .left #insta').click(function() {
-        window.open('https://www.instagram.com/mgsystemsinc/');
-        return false;
-    });
+    // -- Form submission -- //
 });
