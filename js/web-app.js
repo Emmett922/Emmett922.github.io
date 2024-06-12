@@ -63,9 +63,27 @@ $(document).ready(function() {
         $('.services .services-content .transparent-overlay').toggleClass("active");
     });
 
+
+    // -- Redirecting to Other Sites -- //
     // Event Section Actions
     $('.events .events-content .left img').click(function() {
         window.open('https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios');
+        return false;
+    });
+
+    $('.events .events-content .right img').click(function() {
+        window.open('https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios');
+        return false;
+    });
+
+    // Contact Us Social Media Link Actions
+    ('.contact .contact-content .left #facebook').click(function() {
+        window.open('https://www.facebook.com/mgsystemsincorp/?locale=ms_MY&_rdr');
+        return false;
+    });
+
+    ('.contact .contact-content .left #insta').click(function() {
+        window.open('https://www.instagram.com/mgsystemsinc/');
         return false;
     });
 });
