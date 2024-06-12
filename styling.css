@@ -368,6 +368,15 @@ section .title::after {
     color: black;
 }
 
+.services .services-content .serv-descr .serv-descr-content .descr {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.services .services-content .serv-descr .serv-descr-content p {
+    color: black;
+}
+
 .services .services-content .serv-descr .serv-descr-content a {
     display: inline-block;
     background: none;
@@ -394,7 +403,6 @@ section .title::after {
     text-align: center;
     cursor: pointer;
     padding-left: 53px;
-    margin-top: -25px;
 }
 
 .events .events-content .left .item {
@@ -449,7 +457,6 @@ section .title::after {
 .events .events-content .right {
     text-align: center;
     cursor: pointer;
-    margin-top: -25px;
 }
 
 .events .events-content .right .item {
