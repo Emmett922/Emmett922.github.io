@@ -221,7 +221,8 @@
                 <div class="column right">
                     <div class="text">Message Us</div>
                     <!--Contact Form-->
-                    <form method="post" action="submit-form.php" name="contact-form">
+                    <form method="POST" action="https://api.web3forms.com/submit" name="contact-form">
+                        <input type="hidden" name="access_key" value="d2c3865b-5ceb-4888-a5d8-651210ec77fc">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" name="Name" placeholder="Name" onclick="this.select()" required>
