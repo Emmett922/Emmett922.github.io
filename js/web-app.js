@@ -2,7 +2,7 @@ $(document).ready(function() {
     // --- Page scrolling navbar changes --- //
     // Main Navbar changes
     $(window).scroll(function() {
-        if (this.scrollY > 20) {
+        if (this.scrollY > 100) {
             $('.navbar').addClass("sticky");
         }else {
             $('.navbar').removeClass("sticky");
@@ -44,18 +44,24 @@ $(document).ready(function() {
 
 
     // -- Cycle Background Images in Masthead -- //
-    //var images = ["images/soundbord.jpg", "images/mic&headset.jpg", "images/security_cam.jpg", "images/mic.jpg"],
-        //index = 0,
-        //$masthead = $('#masthead');
+    var images = ["images/soundbord.jpg", "images/mic&headset.jpg", "images/security_cam.jpg", "images/mic.jpg"],
+        index = 0,
+        count = -1,
+        $masthead = $('#masthead');
 
-    //setInterval(function() {
-        //$masthead.animate({ opacity: 1 }, function() {
-            //$masthead.css('background-image', 'linear-gradient(rgba(0,0,0,0.75), rgba(6,29,80,0.65)), url('+images[index++]+')');
-            //$masthead.animate({ opacity: 1}, function() {
-                //if(index === images.length) index = 0;
-            //});
-        //});
-    //}, 6000);
+    setInterval(function() {
+        $masthead.animate({ left: -100 }, function() {
+            if (count == 0) {
+                $masthead.css('background-image', 'linear-gradient(rgba(0,0,0,0.75), rgba(6,29,80,0.65)), url('+images[++index]+')');
+            } else {
+                $masthead.css('background-image', 'linear-gradient(rgba(0,0,0,0.75), rgba(6,29,80,0.65)), url('+images[index++]+')');
+                $masthead.animate({ left: 0}, function() {
+                    if(index == images.length) index = 0, count = 0;
+                });
+            }
+        });
+        count++;
+    }, 5000);
 
 
 

@@ -154,8 +154,8 @@
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid white;
     transition: all 0.3s ease;
+    border: 2px solid white;
 }
 
 .masthead .masthead-content a:hover {
@@ -413,6 +413,7 @@ section .title::after {
     text-align: center;
     cursor: pointer;
     padding-left: 53px;
+    transition: all 0.5s ease;
 }
 
 .events .events-content .left .item {
@@ -467,6 +468,7 @@ section .title::after {
 .events .events-content .right {
     text-align: center;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 .events .events-content .right .item {
