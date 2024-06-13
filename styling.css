@@ -136,6 +136,16 @@
     margin-left: -3px;
 }
 
+.masthead .masthead-content .text-3 {
+    font-size: 50px;
+    margin: 5px 0;
+    color: white;
+}
+
+.masthead .masthead-content .text-3 span {
+    color: rgb(48, 123, 255);
+}
+
 .masthead .masthead-content a {
     display: inline-block;
     background: none;
@@ -683,6 +693,28 @@ footer span a:hover {
         margin-right: 25%;
         margin-top: 2%;
     }
+
+    .events .events-content .left{
+        display: inline-block;
+        justify-content: center;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    .events .events-content .right{
+        padding-top: 25px;
+        display: inline-block;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .events .events-content .left:hover {
+        margin-top: 0px;
+    }
+
+    .events .events-content .right:hover {
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -744,6 +776,10 @@ footer span a:hover {
         font-size: 70px;
     }
 
+    .masthead .masthead-content .text-3 {
+        font-size: 45px;
+    }
+
     .masthead .masthead-content a {
         font-size: 23px;
         padding: 10px 30px;
@@ -796,6 +832,10 @@ footer span a:hover {
         font-size: 60px;
     }
 
+    .masthead .masthead-content .text-3 {
+        font-size: 35px;
+    }
+
     .masthead .masthead-content a {
         font-size: 20px;
         padding: 9px 25px;
@@ -818,6 +858,10 @@ footer span a:hover {
 @media (max-width: 579px) {
     .masthead .masthead-content .text-2 {
         font-size: 50px;
+    }
+
+    .masthead .masthead-content .text-3 {
+        font-size: 25px;
     }
 
     .services .services-content .serv-descr.active {

@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     // Slide-Up on ^ button
     $('.scroll-up-btn').click(function() {
-        $('html').animate({scrollTop: 0});
+        $('html').animate({ scrollTop: 0 }, 1200);
     });
 
 
@@ -40,6 +40,32 @@ $(document).ready(function() {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+
+
+
+    // -- Cycle Background Images in Masthead -- //
+    var images = ["images/soundbord.jpg", "images/mic&headset.jpg", "images/security_cam.jpg", "images/mic.jpg"],
+        index = 0,
+        $masthead = $('#masthead');
+
+    setInterval(function() {
+        $masthead.animate({ opacity: 1 }, function() {
+            $masthead.css('background-image', 'linear-gradient(rgba(0,0,0,0.75), rgba(6,29,80,0.65)), url('+images[index++]+')');
+            $masthead.animate({ opacity: 1}, function() {
+                if(index === images.length) index = 0;
+            });
+        });
+    }, 6000);
+
+
+
+    // -- Typing Animation -- //
+    var typed = new Typed(".type", {
+        strings: ["Surveillance", "Home Theater", "Audio/Visual", "Streaming", "Live Music"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    })
 
 
 

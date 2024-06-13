@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styling.css">
     <!--JQuery Source-->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!--Typed.js Source-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
 </head>
 
 <body id="page-top">
@@ -41,6 +43,8 @@
             <div class="masthead-content">
                 <div class="text-1">Welcome To</div>
                 <div class="text-2">MG SYSTEMS INC.</div>
+                <div class="text-3">Services: <span class="type"></span></div>
+                <br>
                 <div style="border-top: 5px solid rgb(37, 37, 255);"></div>
                 <a href="#about">Find Out More</a>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -219,7 +223,8 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message Us</div>
-                    <form method="post" action="" name="contact-form">
+                    <!--Contact Form-->
+                    <form method="post" action="submit-form.php" name="contact-form">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" name="Name" placeholder="Name" onclick="this.select()" required>
