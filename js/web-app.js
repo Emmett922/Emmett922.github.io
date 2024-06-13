@@ -44,6 +44,8 @@ $(document).ready(function() {
 
 
     // -- Cycle Background Images in Masthead -- //
+    // EXPERIENCING ISSUES!! //
+    /*
     var images = ["images/soundbord.jpg", "images/mic&headset.jpg", "images/security_cam.jpg", "images/mic.jpg"],
         index = 0,
         count = -1,
@@ -62,6 +64,7 @@ $(document).ready(function() {
         });
         count++;
     }, 5000);
+    */
 
 
 
