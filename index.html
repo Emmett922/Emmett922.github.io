@@ -223,6 +223,19 @@
                     <!--Contact Form-->
                     <form method="POST" action="https://api.web3forms.com/submit" name="contact-form">
                         <input type="hidden" name="access_key" value="d2c3865b-5ceb-4888-a5d8-651210ec77fc">
+
+                        <!--Email Subject for submission-->
+                        <input type="hidden" name="subject" value="New Contact Us Submission from MGSystemsInc.com">
+
+                        <!--Email From MGSystemsInc.com-->
+                        <input type="hidden" name="from_name" value="MGSystemsInc.com">
+
+                        <!--SPAM Prevention-->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <!--hCaptcha: Extra Layer of SPAM Prevention-->
+                        <div class="h-captcha" data-captch="true"></div>
+
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" name="Name" placeholder="Name" onclick="this.select()" required>
