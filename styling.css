@@ -876,3 +876,29 @@ footer span a:hover {
         margin-top: 2%;
     }
 }
+
+@media (max-width: 480px) {
+    .events .events-content .right img {
+        width: 420px;
+    }
+
+    .services .services-content .serv-descr .serv-descr-content i {
+        font-size: 100px;
+    }
+
+    .services .services-content .serv-descr .serv-descr-content h2 {
+        font-size: 33px;
+    }
+
+    .services .services-content .serv-descr .serv-descr-content a {
+        font-size: 17px;
+        padding: 12px 30px;
+    }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        width: 86.5%;
+        left: -5%;
+        
+    }
+}
