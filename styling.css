@@ -520,6 +520,122 @@ section .title::after {
 
 
 
+/* ### Testimonials Section Styling ### */
+.testimonials .title {
+    margin-bottom: 7%;
+}
+
+.testimonials .title::before {
+    width: 250px;
+}
+
+
+
+.testimonials .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.testimonials .wrapper .testimonials-content {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 350px;
+    color: #fff;
+    background: #222;
+    margin: 40px 10px;
+    padding: 30px 20px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    box-shadow: 12px 12px 2px 1px darkblue;
+}
+
+.testimonials .wrapper .testimonials-content .profile {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -15%;
+    width: 100%;
+    display: block;
+}
+
+.testimonials .wrapper .testimonials-content .profile .imgBox {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border: 8px solid grey;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonials .wrapper .testimonials-content .profile .imgBox img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s ease; 
+}
+
+.testimonials .wrapper .testimonials-content .profile .imgBox:hover img {
+    filter: saturate(140%);
+    transform: scale(0.95);
+}
+
+.testimonials .wrapper .testimonials-content .profile h2 {
+    padding: 5px 0;
+    text-transform: capitalize;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.testimonials .wrapper .testimonials-content p {
+    margin-top: 50px;
+    color: #fff;
+    padding: 0 8px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.testimonials .wrapper .testimonials-content .left {
+    font-size: 30px;
+    display: block;
+    text-align: left;
+    color: rgb(37, 37, 255);
+}
+
+.testimonials .wrapper .testimonials-content .right {
+    font-size: 30px;
+    display: block;
+    text-align: right;
+    color: rgb(37, 37, 255);
+}
+
+.testimonials .wrapper .testimonials-content .social {
+    width: 100%;
+}
+
+.testimonials .wrapper .testimonials-content .social i {
+    font-size: 1.2em;
+    color: #fff;
+    padding: 8px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 4px;
+    box-shadow: 0.4px 4px rgba(0,0,0,0.5);
+}
+
+.testimonials .wrapper .testimonials-content .social i:hover {
+    background: rgb(37, 37, 255);
+}
+
+
+
 /* ### Contact Section Styling ### */
 .contact {
     background-color: rgb(50,50,50);
