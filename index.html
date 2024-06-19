@@ -222,7 +222,7 @@
                 <div class="column right">
                     <div class="text">Message Us</div>
                     <!--Contact Form-->
-                    <form method="POST" action="https://api.web3forms.com/submit" name="contact-form">
+                    <form method="POST" action="https://api.web3forms.com/submit" name="contact-form" id="contact-form">
                         <input type="hidden" name="access_key" value="d2c3865b-5ceb-4888-a5d8-651210ec77fc">
 
                         <!--Email Subject for submission-->
@@ -239,6 +239,17 @@
 
                         <!--hCaptcha: Extra Layer of SPAM Prevention-->
                         <div class="h-captcha" data-captch="true"></div>
+
+                        <!--hCaptcha configuration-->
+                        <div class="h-captcha"
+                            data-captch="true"
+                            data-lang="en"
+                            data-theme="dark"
+                            data-size="compact"
+                            data-orientation="portrait"
+                            data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                            data-render="explicit">
+                        </div>
 
                         <div class="fields">
                             <div class="field name">
@@ -276,5 +287,20 @@
 
     <!--Main JS file-->
     <script src="js/web-app.js"></script>
+
+    <!--Client Side Validation-->
+    <script type="text/javascript">
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', function(e) {
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field")
+                return
+            }
+        });
+    </script>
 </body>
 </html>
