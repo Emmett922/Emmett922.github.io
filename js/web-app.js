@@ -2,7 +2,7 @@ $(document).ready(function() {
     // --- Page scrolling navbar changes --- //
     // Main Navbar changes
     $(window).scroll(function() {
-        if (this.scrollY > 100) {
+        if (this.scrollY > 20) {
             $('.navbar').addClass("sticky");
             $('.navbar .menu .services-submenu').addClass("sticky");
         }else {
@@ -59,8 +59,9 @@ $(document).ready(function() {
     });
 
     // -- Toggle Submenu -- //
-    $('#services-link, .services-submenu .services-submenu-link').click(function() {
+    $('#services-link, .services-submenu .services-submenu-link, .portfolio-nav .menu #services-link').click(function() {
         $('.navbar .menu .services-submenu').toggleClass("active");
+        $('.portfolio-nav .menu .services-submenu').toggleClass("active");
     });
 
 
@@ -99,8 +100,10 @@ $(document).ready(function() {
     })
 
 
+    // -- Removing this option -- //
 
     // -- Toggle Services Description pop-up -- //
+    /*
     // Opening pop-up
     $('.services .services-content .card').click(function(event) {
         $('.services .services-content .card').toggleClass("active");
@@ -136,6 +139,7 @@ $(document).ready(function() {
         $('.services .services-content .serv-descr').toggleClass("active");
         $('.services .services-content .transparent-overlay').toggleClass("active");
     });
+    */
 
 
 
@@ -150,4 +154,21 @@ $(document).ready(function() {
         window.open('https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios');
         return false;
     });
+
+    // -- Cycling through Images in Portfolio Gallery -- //
+    var slide_img = document.querySelector('.img-item');
+    var images = ['image0.jpeg', 'image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.jpeg',
+        'image5.jpeg', 'image6.jpeg', 'image7.jpeg', 'image8.jpeg', 'image9.jpeg',
+        'image10.jpeg', 'image11.jpeg', 'image12.jpeg', 'image13.jpeg'];
+    var i = 0;
+
+    document.querySelector('.gallery button').addEventListener('click', function() {
+        if (i >= images.length - 1) i = -1;
+        i++;
+        return setImage();
+    });
+
+    function setImage() {
+        return slide_img.setAttribute('src', 'images/' + images[i])
+    }
 });

@@ -26,7 +26,18 @@
     z-index: 999;
 }
 
-.navbar .max-width {
+.portfolio-nav {
+    background: rgb(0, 0, 100);
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.navbar .max-width,
+.portfolio-nav .max-width {
     max-width: 1600px;
 }
 
@@ -35,13 +46,15 @@
     background: rgb(0, 0, 100);
 }
 
-.navbar .max-width {
+.navbar .max-width,
+.portfolio-nav .max-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar .logo a {
+.navbar .logo a,
+.portfolio-nav .logo a{
     color: white;
     font-size: 35px;
     font-weight: 600;
@@ -52,16 +65,19 @@
     align-items: center;
 }
 
-.navbar .logo img {
+.navbar .logo img,
+.portfolio-nav .logo img {
     height: 60px;
 }
 
-.navbar .menu li {
+.navbar .menu li,
+.portfolio-nav .menu li {
     list-style: none;
     display: inline-block;
 }
 
-.navbar .menu li a {
+.navbar .menu li a,
+.portfolio-nav .menu li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -70,7 +86,8 @@
     transition: color 0.3s ease;
 }
 
-.navbar .menu li i {
+.navbar .menu li i,
+.portfolio-nav .menu li i {
     font-size: 12px;
 }
 
@@ -83,12 +100,14 @@
     transform: rotate(180deg);
 }
 
-.navbar.sticky .menu li a:hover {
+.navbar.sticky .menu li a:hover,
+.portfolio-nav .menu li a:hover {
     color: white;
 }
 
 /* ## Submenu Styling ## */
-.navbar .menu .services-submenu {
+.navbar .menu .services-submenu,
+.portfolio-nav .menu .services-submenu {
     left: 59.5%;
     width: 8.1%;
     opacity: 0;
@@ -98,22 +117,26 @@
     z-index: 999;
 }
 
-.navbar .menu .services-submenu li {
+.navbar .menu .services-submenu li,
+.portfolio-nav .menu .services-submenu li {
     padding-bottom: 15px;
     margin-left: -15px;
 }
 
-.navbar .menu .services-submenu.sticky {
+.navbar .menu .services-submenu.sticky,
+.portfolio-nav .menu .services-submenu {
     background: rgb(0, 0, 100);
 }
 
-.navbar .menu li:hover .services-submenu {
+.navbar .menu li:hover .services-submenu,
+.portfolio-nav .menu li:hover .services-submenu {
     opacity: 1;
     padding-top: 15px;
     visibility: visible;
 }
 
-.navbar .menu .services-submenu:hover {
+.navbar .menu .services-submenu:hover,
+.portfolio-nav .menu .services-submenu:hover {
     opacity: 1;
     padding-top: 15px;
     visibility: visible;
@@ -125,11 +148,19 @@
     visibility: visible;
 }
 
+.portfolio-nav .menu .services-submenu.active {
+    opacity: 1;
+    padding-top: 15px;
+    visibility: visible;
+    background: rgb(0, 0, 100);
+}
+
 .navbar .menu .services-submenu.active.sticky {
     background: rgb(0, 0, 100);
 }
 
-.navbar .menu .services-submenu li {
+.navbar .menu .services-submenu li,
+.portfolio-nav .menu .services-submenu li {
     float: none;
     width: 100%;
 }
@@ -183,8 +214,69 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+#masthead-portfolio {
+    height: 70vh;
+    background-image: none;
+    text-align: center;
+}
+
+#masthead-surveillance {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(6, 29, 80, 0.65)), url('images/security_cam.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#masthead-home-theater {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(6, 29, 80, 0.65)), url('images/home-theater.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#masthead-audio-visual {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(6, 29, 80, 0.65)), url('images/mic&headset.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#masthead-streaming {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(6, 29, 80, 0.65)), url('images/image5.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#masthead-live-music {
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(6, 29, 80, 0.65)), url('images/mic2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#masthead-surveillance .text-1 a,
+#masthead-home-theater .text-1 a,
+#masthead-audio-visual .text-1 a,
+#masthead-streaming .text-1 a,
+#masthead-live-music .text-1 a {
+    cursor: pointer;
+    font-size: 27px;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+#masthead-surveillance .text-1 a:hover,
+#masthead-home-theater .text-1 a:hover,
+#masthead-audio-visual .text-1 a:hover,
+#masthead-streaming .text-1 a:hover,
+#masthead-live-music .text-1 a:hover {
+    text-decoration: underline;
+}
+
 .masthead .max-width {
     margin: auto 0 auto 40px;
+}
+
+#masthead-portfolio .max-width {
+    margin: auto;
+    max-width: 1300px;
 }
 
 .masthead .masthead-content .text-1 {
@@ -196,6 +288,16 @@
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     margin-left: -3px;
+}
+
+#masthead-portfolio .masthead-content .text-2 {
+    text-align: center;
+    font-size: 120px;
+    color: rgb(104, 104, 104);
+}
+
+#masthead-portfolio .masthead-content .text-2 span {
+    color: darkblue;
 }
 
 .masthead .masthead-content .text-3 {
@@ -220,7 +322,14 @@
     border: 2px solid white;
 }
 
-.masthead .masthead-content a:hover {
+#masthead-portfolio .masthead-content a {
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+}
+
+.masthead .masthead-content a:hover,
+#masthead-portfolio .masthead-content a:hover {
     color: white;
     background: rgb(37, 37, 255);
     border: 2px solid rgb(37, 37, 255);
@@ -239,6 +348,7 @@ section{
 .contact,
 .testimonials,
 .portfolio,
+.info
 footer {
     font-family: 'Poppins', sans-serif;
 }
@@ -247,7 +357,8 @@ footer {
 .about-content,
 .services .services-content,
 .events .events-content,
-.contact .contact-content {
+.contact .contact-content,
+.info .info-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -289,7 +400,10 @@ section .title::after {
 
 
 /* ### About Section Styling ### */
-.about .about-content .left {
+.about .about-content .left,
+.info .info-content .column.one.left,
+.info .info-content .column.two.left, 
+.info .info-content .column.three.left {
     width: 45%;
 }
 
@@ -299,16 +413,22 @@ section .title::after {
     object-fit: cover;
 }
 
-.about .about-content .right {
+.about .about-content .right,
+.info .info-content .column.one.right,
+.info .info-content .column.two.right, 
+.info .info-content .column.three.right {
     width: 55%;
 }
 
-.about .about-content .right p {
+.about .about-content .right p,
+.info .info-content .column.one.right p,
+.info .info-content .column.two.right p, 
+.info .info-content .column.three.right p {
+    font-family: 'Poppins', sans-serif;
     text-align: justify;
 }
 
-.about .about-content .right a,
-.portfolio .portfolio-btn a {
+.about .about-content .right a {
     display: inline-block;
     background: none;
     color: black;
@@ -321,8 +441,7 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.about .about-content .right a:hover,
-.portfolio .portfolio-btn a:hover {
+.about .about-content .right a:hover {
     color: white;
     background: rgb(37, 37, 255);
     border: 2px solid rgb(37, 37, 255);
@@ -490,27 +609,25 @@ section .title::after {
     text-align: center;
 }
 
-.portfolio .max-width {
-    max-width: 1500px;
+.portfolio .portfolio-btns a {
+    display: inline-block;
+    background: none;
+    color: black;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 25px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease-in-out;
 }
 
-.portfolio .portfolio-content .img-gallery-container {
-    flex-direction: row;
-}
-
-.portfolio .portfolio-content .img-gallery-container img {
-    text-align: center;
-    height: 70vh;
-    width: 90%;
-}
-
-.portfolio .portfolio-content .arrows {
-    display: flex;
-    justify-content: center;
-}
-
-.portfolio .portfolio-btn a {
-    text-align: center;
+.portfolio .portfolio-btns a:hover {
+    color: white;
+    background: rgb(37, 37, 255);
+    border: 2px solid rgb(37, 37, 255);
+    transform: scale(1.15);
+    margin-inline: 30px;
 }
 
 
@@ -788,7 +905,6 @@ section .title::after {
 .contact {
     background-color: rgb(50,50,50);
     color: white;
-
 }
 
 .contact .max-width {
@@ -916,9 +1032,136 @@ section .title::after {
 }
 
 
+/* #### Service(s) Page Styling #### */
+/* ### Service Info Section Styling ### */
+.info .max-width {
+    max-width: 1500px;
+}
+
+.info .info-content {
+    align-items: center;
+}
+
+.info .title {
+    margin-bottom: 10%;
+}
+
+.info .info-content .column.one.left,
+.info .info-content .column.two.left, 
+.info .info-content .column.three.left {
+    width: 45%;
+}
+
+.info .info-content .column.one.left img,
+.info .info-content .column.two.left img, 
+.info .info-content .column.three.left img {
+    height: 500px;
+    width: 625px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 97, 0.9) -80px -80px;
+}
+
+.info .info-content h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.info .info-content .column.one.right,
+.info .info-content .column.two.right, 
+.info .info-content .column.three.right {
+    width: 45%;
+}
+
+/* # Customer Reviews for Individual Services # */
+#home-theater-reviews,
+#surveillance-reviews,
+#audio-visual-reviews,
+#streaming-reviews,
+#live-music-reviews {
+    background: rgb(50,50,50);
+    color: white;
+}
+
+#home-theater-reviews .title::before,
+#surveillance-reviews .title::before,
+#audio-visual-reviews .title::before,
+#streaming-reviews .title::before,
+#live-music-reviews .title::before {
+    background-color: white;
+}
+
+#home-theater-reviews .wrapper a,
+#surveillance-reviews .wrapper a,
+#audio-visual-reviews .wrapper a,
+#streaming-reviews .wrapper a,
+#live-music-reviews .wrapper a {
+    display: inline-block;
+    background: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+#home-theater-reviews .wrapper a:hover,
+#surveillance-reviews .wrapper a:hover,
+#audio-visual-reviews .wrapper a:hover,
+#streaming-reviews .wrapper a:hover,
+#live-music-reviews .wrapper a:hover {
+    border: 2px solid rgb(37, 37, 255);
+    background: rgb(37, 37, 255);
+}
+
+
+/* # Mini-Contact Us Section Styling # */
+.mini-contact {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.mini-contact h2 {
+    font-size: 40px;
+    margin-bottom: 70px;
+}
+
+.mini-contact h4 {
+    font-family: 'Ubunutu', sans-serif;
+    font-size: 25px;
+}
+
+.mini-contact a {
+    display: inline-block;
+    background: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+.mini-contact a:hover {
+    color: white;
+    border: 2px solid rgb(37, 37, 255);
+    background: rgb(37, 37, 255);
+}
+
+
+
+/* ### Portfolio Page Styling ### */
+/* Heading and Nav Styling near top with the rest */
+
+
 
 /* ### Footer Section Styling ### */
 footer {
+    font-family: 'Poppins', sans-serif;
     background-color: rgb(50,50,50);
     color: white;
     padding: 20px 23px;
