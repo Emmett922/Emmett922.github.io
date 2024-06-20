@@ -4,8 +4,10 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if (this.scrollY > 100) {
             $('.navbar').addClass("sticky");
+            $('.navbar .menu .services-submenu').addClass("sticky");
         }else {
             $('.navbar').removeClass("sticky");
+            $('.navbar .menu .services-submenu').removeClass("sticky");
         }
 
         if(this.scrollY > 500) {
@@ -18,6 +20,21 @@ $(document).ready(function() {
     // Slide-Up on ^ button
     $('.scroll-up-btn').click(function() {
         $('html').animate({ scrollTop: 0 }, 1200);
+    });
+
+
+    // -- Owl Carousel Script -- //
+    $('.wrapper').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            }
+        }
     });
 
 
@@ -39,6 +56,11 @@ $(document).ready(function() {
     $('.menu-btn, .menu li a').click(function() {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
+    });
+
+    // -- Toggle Submenu -- //
+    $('#services-link, .services-submenu .services-submenu-link').click(function() {
+        $('.navbar .menu .services-submenu').toggleClass("active");
     });
 
 

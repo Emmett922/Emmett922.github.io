@@ -26,6 +26,10 @@
     z-index: 999;
 }
 
+.navbar .max-width {
+    max-width: 1600px;
+}
+
 .navbar.sticky {
     padding: 15px 0;
     background: rgb(0, 0, 100);
@@ -62,17 +66,74 @@
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 25px;
+    margin-left: 35px;
     transition: color 0.3s ease;
+}
+
+.navbar .menu li i {
+    font-size: 12px;
 }
 
 .navbar .menu li a:hover {
     color: rgb(74, 74, 243);
 }
 
+.navbar .menu li a:hover i {
+    transition: 0.1s;
+    transform: rotate(180deg);
+}
+
 .navbar.sticky .menu li a:hover {
     color: white;
 }
+
+/* ## Submenu Styling ## */
+.navbar .menu .services-submenu {
+    left: 59.5%;
+    width: 8.1%;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+.navbar .menu .services-submenu li {
+    padding-bottom: 15px;
+    margin-left: -15px;
+}
+
+.navbar .menu .services-submenu.sticky {
+    background: rgb(0, 0, 100);
+}
+
+.navbar .menu li:hover .services-submenu {
+    opacity: 1;
+    padding-top: 15px;
+    visibility: visible;
+}
+
+.navbar .menu .services-submenu:hover {
+    opacity: 1;
+    padding-top: 15px;
+    visibility: visible;
+}
+
+.navbar .menu .services-submenu.active {
+    opacity: 1;
+    padding-top: 15px;
+    visibility: visible;
+}
+
+.navbar .menu .services-submenu.active.sticky {
+    background: rgb(0, 0, 100);
+}
+
+.navbar .menu .services-submenu li {
+    float: none;
+    width: 100%;
+}
+
 
 /* ### Menu Button Styling ### */
 .menu-btn {
@@ -172,11 +233,21 @@ section{
     padding: 100px 0;
 }
 
-.about, .services, .events, .contact, footer {
+.about,
+.services,
+.events,
+.contact,
+.testimonials,
+.portfolio,
+footer {
     font-family: 'Poppins', sans-serif;
 }
 
-.about .about-content, .services .services-content, .events .events-content, .contact .contact-content {
+.about
+.about-content,
+.services .services-content,
+.events .events-content,
+.contact .contact-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -236,7 +307,8 @@ section .title::after {
     text-align: justify;
 }
 
-.about .about-content .right a {
+.about .about-content .right a,
+.portfolio .portfolio-btn a {
     display: inline-block;
     background: none;
     color: black;
@@ -249,7 +321,8 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.about .about-content .right a:hover {
+.about .about-content .right a:hover,
+.portfolio .portfolio-btn a:hover {
     color: white;
     background: rgb(37, 37, 255);
     border: 2px solid rgb(37, 37, 255);
@@ -268,15 +341,15 @@ section .title::after {
 }
 
 .services .max-width {
-    max-width: 1500px;
+    max-width: 1800px;
 }
 
 .services .services-content .card {
-    width: (50% - 20px);
+    width: calc(20% - 20px);
     background: rgb(31,31,31);
     text-align: center;
     border-radius: 6px;
-    padding: 75px 50px;
+    padding: 25px 25px;
     cursor: pointer;
 }
 
@@ -293,7 +366,7 @@ section .title::after {
 }
 
 .services .services-content .card i {
-    font-size: 50px;
+    font-size: 65px;
     color: rgb(37, 37, 255);
     transition: color 0.3s ease;
 }
@@ -303,9 +376,13 @@ section .title::after {
 }
 
 .services .services-content .card .text {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+}
+
+.services .services-content .card p {
+    font-size: 15px;
 }
 
 /* ## Services Description Styling ## */
@@ -408,7 +485,47 @@ section .title::after {
 
 
 
+/* ### Portfolio Section Styling ### */
+.portfolio {
+    text-align: center;
+}
+
+.portfolio .max-width {
+    max-width: 1500px;
+}
+
+.portfolio .portfolio-content .img-gallery-container {
+    flex-direction: row;
+}
+
+.portfolio .portfolio-content .img-gallery-container img {
+    text-align: center;
+    height: 70vh;
+    width: 90%;
+}
+
+.portfolio .portfolio-content .arrows {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .portfolio-btn a {
+    text-align: center;
+}
+
+
+
 /* ### Events Section Styling ### */
+.events {
+    background-color: rgb(50,50,50);
+    color: white;
+}
+
+.events .title::before {
+    background: white;
+}
+
+
 /* Left Column */
 .events .events-content .left {
     text-align: center;
@@ -525,12 +642,6 @@ section .title::after {
     margin-bottom: 7%;
 }
 
-.testimonials .title::before {
-    width: 250px;
-}
-
-
-
 .testimonials .wrapper {
     width: 100%;
     display: flex;
@@ -542,23 +653,32 @@ section .title::after {
 .testimonials .wrapper .testimonials-content {
     font-family: 'Poppins', sans-serif;
     position: relative;
-    width: 350px;
+    width: 900px;
     color: #fff;
     background: #222;
-    margin: 40px 10px;
+    margin: 80px 125px;
     padding: 30px 20px;
+    overflow-inline: hidden;
     border-radius: 3px;
     transition: all 0.3s ease;
     box-shadow: 12px 12px 2px 1px darkblue;
+}
+
+.testimonials .wrapper .testimonials-content:hover {
+    transform: scale(1.05);
 }
 
 .testimonials .wrapper .testimonials-content .profile {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -15%;
+    top: -18%;
     width: 100%;
     display: block;
+}
+
+.testimonials .wrapper .testimonials-content p {
+    margin-bottom: 25px;
 }
 
 .testimonials .wrapper .testimonials-content .profile .imgBox {
@@ -584,7 +704,7 @@ section .title::after {
 
 .testimonials .wrapper .testimonials-content .profile .imgBox:hover img {
     filter: saturate(140%);
-    transform: scale(0.95);
+    transform: scale(1.15);
 }
 
 .testimonials .wrapper .testimonials-content .profile h2 {
@@ -599,7 +719,7 @@ section .title::after {
     margin-top: 50px;
     color: #fff;
     padding: 0 8px;
-    font-size: 15px;
+    font-size: 20px;
     opacity: 0.8;
 }
 
@@ -623,8 +743,9 @@ section .title::after {
 
 .testimonials .wrapper .testimonials-content .social i {
     font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
-    padding: 8px;
+    padding: 8px 25px;
     background: rgba(255,255,255,0.08);
     border-radius: 4px;
     box-shadow: 0.4px 4px rgba(0,0,0,0.5);
@@ -632,6 +753,33 @@ section .title::after {
 
 .testimonials .wrapper .testimonials-content .social i:hover {
     background: rgb(37, 37, 255);
+}
+
+
+/* ## Owl Dots Styling ## */
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: non!important;
+    border-radius: 50%;
+    border: 2px solid darkblue!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: darkblue!important;
 }
 
 
