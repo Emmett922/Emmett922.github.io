@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MG Systems Inc.</title>
+    <!--Page Icon-->
+    <link rel="shortcut icon" href="images/mg_systems_inc_logo.png" type="image/x-icon">
+    <!--Font Awsome icons (free use)-->
+    <script src="https://kit.fontawesome.com/779277f03e.js" crossorigin="anonymous"></script>
+    <!--Main CSS file-->
+    <link rel="stylesheet" href="styling.css">
+    <!--JQuery Source (free use)-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Navbar Section-->
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="index.html"><img src="images/mg_systems_inc_logo.png" alt="MG Systems Small Logo">&nbsp; MG Systems Inc.</a></div>
+            <ul class="menu">
+                <li><a href="#about">About</a></li>
+                <li id="services-link"><a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="services-submenu">
+                        <li class="services-submenu-link" id="streaming"><a href="surveilance.html">Surveillance</a></li>
+                        <li class="services-submenu-link" id="home-theater"><a href="home-theater.html">Home Theater</a></li>
+                        <li class="services-submenu-link" id="audio-visual"><a href="audio-visual.html">Audio/Visual</a></li>
+                        <li class="services-submenu-link" id="streaming"><a href="streaming.html">Streaming</a></li>
+                        <li class="services-submenu-link" id="live-music"><a href="live-music.html">Live Music</a></li>
+                    </ul>
+                </li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--Contact Section-->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="info">
+                                <div class="head">&nbsp;Address</div>
+                                <div class="sub-title">&nbsp;5467 Bells Ferry Rd, Acworth, Georgia 40102 (Appt. Only)</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="info">
+                                <div class="head">Phone</div>
+                                <div class="sub-title">(770) 516-5555</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">info@mgsystemsinc.com</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-brands fa-facebook"></i>
+                            <div class="info" id="facebook">
+                                <div class="head"><a href="https://www.facebook.com/mgsystemsincorp/?locale=ms_MY&_rdr" target="_blank">Facebook</a></div>
+                                <div class="sub-title"><a href="https://www.facebook.com/mgsystemsincorp/?locale=ms_MY&_rdr" target="_blank">@mgsystemsinc</a></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fa-brands fa-instagram"></i>
+                            <div class="info" id="insta">
+                                <div class="head"><a href="https://www.instagram.com/mgsystemsinc/" target="_blank">Instagram</a></div>
+                                <div class="sub-title"><a href="https://www.instagram.com/mgsystemsinc/" target="_blank">@mgsystemsinc</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">Message Us</div>
+                    <!--Contact Form-->
+                    <form method="POST" action="https://api.web3forms.com/submit" name="contact-form" id="contact-form">
+                        <input type="hidden" name="access_key" value="d2c3865b-5ceb-4888-a5d8-651210ec77fc">
+
+                        <!--Email Subject for submission-->
+                        <input type="hidden" name="subject" value="New Contact Us Submission from MGSystemsInc.com">
+
+                        <!--Email From MGSystemsInc.com-->
+                        <input type="hidden" name="from_name" value="MGSystemsInc.com">
+
+                        <!--Reply To Customer-->
+                        <input type="hidden" name="replyto" value="">
+
+                        <!--SPAM Prevention-->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <!--hCaptcha: Extra Layer of SPAM Prevention-->
+                        <div class="h-captcha" data-captch="true"></div>
+
+                        <!--hCaptcha configuration-->
+                        <div class="h-captcha"
+                            data-captch="true"
+                            data-lang="en"
+                            data-theme="dark"
+                            data-size="compact"
+                            data-orientation="portrait"
+                            data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                            data-render="explicit">
+                        </div>
+
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" name="Name" placeholder="Name" onclick="this.select()" required>
+                            </div>
+                            <div class="field phone">
+                                <input type="text" name="Phone" placeholder="Phone" onclick="this.select()">
+                            </div>
+                        </div>
+                        <div class="field email">
+                            <input type="email" name="Email" placeholder="Email" onclick="this.select()" required>
+                        </div>
+                        <div class="field subject">
+                            <input type="text" name="Subject" placeholder="Subject" onclick="this.select()" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" name="Message" placeholder="Message..." onclick="this.select()" required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" id="submit-btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+        <footer id="contact-footer">
+            <span>Copyright <span class="far fa-copyright"></span>&nbsp;<a href="index.html">MG Systems Inc.</a> | 2024 All Rights Reserved</span>
+        </footer>
+    </section>
+
+    
+    <!--Web3Forms hCaptcha source (free use)-->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+
+    <!--Main JS file-->
+    <script src="js/web-app.js"></script>
+
+    <!--Client Side Validation-->
+    <script type="text/javascript">
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', function(e) {
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field")
+                return
+            }
+        });
+    </script>
+</body>
+</html>
