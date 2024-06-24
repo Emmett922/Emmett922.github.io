@@ -411,26 +411,44 @@ section .title::after {
 /* ### About Section Styling ### */
 .about {
     background-color: rgb(242, 252, 255);
+    padding: 80px 0;
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about .about-content .left,
 .service-info .info-content .column.one.left,
 .service-info .info-content .column.two.right, 
 .service-info .info-content .column.three.left {
-    width: 45%;
+    /*width: 45%;*/
+    flex: 0 0 45%; /* Flex basis for left column */
+    max-width: 45%; /* Limit maximum width for responsiveness */
 }
 
 .about .about-content .left img {
-    height: 400px;
+    /*height: 400px;
     width: 425px;
-    object-fit: cover;
+    object-fit: cover;*/
+    width: 100%;
+    max-width: 100%; /* Ensure image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
 }
 
 .about .about-content .right,
 .service-info .info-content .column.one.right,
 .service-info .info-content .column.two.left, 
 .service-info .info-content .column.three.right {
-    width: 55%;
+    /*width: 55%;*/
+    flex: 0 0 50%; /* Flex basis for right column */
+    max-width: 50%; /* Limit maximum width for responsiveness */
 }
 
 .about .about-content .right p,
@@ -439,15 +457,16 @@ section .title::after {
 .service-info .info-content .column.three.right p {
     font-family: 'Poppins', sans-serif;
     text-align: justify;
+    margin-bottom: 20px;
 }
 
 .about .about-content .right a {
     display: inline-block;
     background: none;
     color: black;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    padding: 10px 30px;
+    padding: 10px 25px;
     margin-top: 20px;
     border-radius: 6px;
     border: 2px solid black;
@@ -1285,7 +1304,7 @@ footer {
     padding: 20px 23px;
     text-align: center;
     font-size: 15px;
-    height: 38vh;
+    /*height: 37vh;*/
 }
 
 .contact #contact-footer {
@@ -1336,7 +1355,6 @@ footer .footer-content .other .footer-contact a:hover {
 }
 
 footer img {
-    padding-top: 1rem;
     height: 200px;
 }
 
@@ -1356,6 +1374,7 @@ footer a:hover i {
 
 
 /* ### Responsive media styling ### */
+/*
 @media (max-width: 1300px) {
     .masthead .max-width {
         margin-left: 0px;
@@ -1580,5 +1599,380 @@ footer a:hover i {
         width: 86.5%;
         left: -5%;
         
+    }
+}
+*/
+
+@media (max-width: 1300px) {
+    .masthead .max-width {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1150px) {
+    .about .about-content .left img {
+        height: 325px; /* Adjusted height */
+        width: 350px; /* Adjusted width */
+    }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 50%; /* Adjusted width */
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 2%;
+    }
+
+    .events .events-content .left,
+    .events .events-content .right {
+        display: inline-block;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .events .events-content .left:hover,
+    .events .events-content .right:hover {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 60%; /* Adjusted width */
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 2%;
+    }
+}
+
+@media (max-width: 947px) {
+    .max-width {
+        padding: 0 50px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: 100%;
+        top: 0;
+        background: rgb(61, 61, 61);
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .masthead .masthead-content .text-2 {
+        font-size: 70px;
+    }
+
+    .masthead .masthead-content .text-3 {
+        font-size: 45px;
+    }
+
+    .masthead .masthead-content a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+
+    .max-width {
+        max-width: 800px;
+    }
+
+    .about .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+
+    .about .about-content .left img {
+        width: 100%; /* Ensure image takes full width */
+        max-width: none; /* Remove max-width restriction */
+        height: auto; /* Allow height to adjust proportionally */
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
+    .services .services-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 2%;
+    }
+
+    .events .events-content .left img,
+    .events .events-content .right img {
+        height: auto; /* Ensure images scale proportionally */
+        max-width: 100%; /* Ensure images fit within container */
+        width: auto; /* Allow images to scale down */
+        margin: 0 auto; /* Center images horizontally */
+        display: block; /* Remove default inline block spacing */
+    }
+
+    .events .events-content .left,
+    .events .events-content .right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-content .other {
+        margin-top: 20px;
+    }
+
+    footer .footer-content .other .contact-info,
+    footer .footer-content .other .services,
+    footer .footer-content .other .home,
+    footer .footer-content .other .footer-contact {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    footer .footer-content .other .footer-contact a {
+        font-size: 18px; /* Decrease font size for smaller screens */
+        padding: 10px 30px; /* Adjust padding */
+        margin-top: 15px; /* Adjust margin top */
+    }
+
+    footer img {
+        height: 150px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 724px) {
+    .max-width {
+        padding: 0 23px;
+    }
+
+    .masthead .masthead-content .text-2 {
+        font-size: 60px;
+    }
+
+    .masthead .masthead-content .text-3 {
+        font-size: 35px;
+    }
+
+    .masthead .masthead-content a {
+        font-size: 20px;
+        padding: 9px 25px;
+    }
+
+    .about .about-content {
+        flex-direction: column;
+    }
+
+    .about .about-content .left img {
+        width: 100%; /* Ensure image takes full width */
+        max-width: none; /* Remove max-width restriction */
+        height: auto; /* Allow height to adjust proportionally */
+        margin-bottom: 20px;
+    }
+
+    .about .about-content .right {
+        width: 100%; /* Ensure text content takes full width */
+        max-width: none; /* Remove max-width restriction */
+        margin-top: 20px; /* Add space between image and text */
+    }
+
+    .services .services-content .card {
+        width: 100%;
+    }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+    }
+
+    .events .events-content .left img,
+    .events .events-content .right img {
+        height: auto; /* Ensure images scale proportionally */
+        max-width: 100%; /* Ensure images fit within container */
+        width: auto; /* Allow images to scale down */
+        margin: 0 auto; /* Center images horizontally */
+        display: block; /* Remove default inline block spacing */
+    }
+
+    footer .footer-content .other .contact-info,
+    footer .footer-content .other .services,
+    footer .footer-content .other .home,
+    footer .footer-content .other .footer-contact {
+        margin-bottom: 20px; /* Add some spacing between sections */
+    }
+
+    footer .footer-content .other {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-content .other .contact-info,
+    footer .footer-content .other .services,
+    footer .footer-content .other .home,
+    footer .footer-content .other .footer-contact {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    footer .footer-content .other .footer-contact a {
+        font-size: 16px; /* Further decrease font size for very small screens */
+        padding: 8px 25px; /* Adjust padding */
+        margin-top: 10px; /* Adjust margin top */
+    }
+}
+
+@media (max-width: 579px) {
+    .masthead .masthead-content .text-2 {
+        font-size: 50px;
+    }
+
+    .masthead .masthead-content .text-3 {
+        font-size: 25px;
+    }
+
+    .about .about-content .left img {
+        width: 100%; /* Ensure image takes full width */
+        max-width: none; /* Remove max-width restriction */
+        height: auto; /* Allow height to adjust proportionally */
+    }
+
+    .about .about-content .right {
+        width: 100%; /* Ensure text content takes full width */
+        max-width: none; /* Remove max-width restriction */
+        margin-top: 20px; /* Add space between image and text */
+    }
+
+    .about .about-content .right p {
+        font-size: 16px; /* Adjust text size for better readability */
+    }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        height: 90%;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+    }
+
+    .events .events-content .left img,
+    .events .events-content .right img {
+        height: auto; /* Ensure images scale proportionally */
+        max-width: 100%; /* Ensure images fit within container */
+        width: auto; /* Allow images to scale down */
+        margin: 0 auto; /* Center images horizontally */
+        display: block; /* Remove default inline block spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .about .about-content .left img {
+        width: 100%; /* Ensure image takes full width */
+        max-width: none; /* Remove max-width restriction */
+        height: auto; /* Allow height to adjust proportionally */
+    }
+
+    .about .about-content .right {
+        width: 100%; /* Ensure text content takes full width */
+        max-width: none; /* Remove max-width restriction */
+        margin-top: 20px; /* Add space between image and text */
+    }
+
+    .about .about-content .right p {
+        font-size: 14px; /* Further adjust text size for smaller screens */
+    }
+
+    .events .events-content .right img {
+        width: 420px; /* Adjusted width */
+    }
+
+    .events .events-content .left img {
+        width: 100%; /* Ensure image takes full width */
+        max-width: none; /* Remove max-width restriction */
+        height: auto; /* Allow height to adjust proportionally */
+    }
+
+    .events .events-content .right img {
+        width: 100%; /* Ensure image takes full width */
+        max-width: none; /* Remove max-width restriction */
+        height: auto; /* Allow height to adjust proportionally */
+    }
+
+    .services .services-content .serv-descr .serv-descr-content i {
+        font-size: 100px;
+    }
+
+    .services .services-content .serv-descr .serv-descr-content h2 {
+        font-size: 33px;
+    }
+
+    .services .services-content .serv-descr .serv-descr-content a {
+        font-size: 17px;
+        padding: 12px 30px;
+    }
+
+    .services .services-content .serv-descr.active {
+        top: 0;
+        width: 86.5%;
+        left: -5%;
     }
 }
