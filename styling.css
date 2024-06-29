@@ -951,11 +951,15 @@ section .title::after {
     background-size: cover;
     background-attachment: fixed;
     color: white;
-    height: 100vh;
+}
+
+.contact .contact-container {
+    margin-top: 5%;
 }
 
 .contact #contact-footer {
-    margin-bottom: -12%;
+    margin-bottom: -4.4%;
+    padding-top: 13%;
 }
 
 .contact .max-width {
@@ -1094,24 +1098,25 @@ section .title::after {
 }
 
 .service-info .info-content {
-    align-items: center;
+    text-align: center;
 }
 
 .service-info .title {
     margin-bottom: 15%;
 }
 
-.service-info .info-content .column.one.left,
-.service-info .info-content .column.two.right, 
-.service-info .info-content .column.three.left {
+.service-info #info-content-one,
+.service-info #info-content-two {
+    margin-bottom: 15%;
+}
+
+.service-info .info-content .column {
     width: 45%;
 }
 
-.service-info .info-content .column.one.left img,
-.service-info .info-content .column.two.right img, 
-.service-info .info-content .column.three.left img {
+.service-info .info-content .column img {
     height: 500px;
-    width: 625px;
+    width: 100%;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 97, 0.9) -80px -80px;
@@ -1123,12 +1128,18 @@ section .title::after {
 
 .service-info .info-content h2 {
     font-family: 'Poppins', sans-serif;
+    text-align: justify;
 }
 
 .service-info .info-content .column.one.right,
 .service-info .info-content .column.two.left, 
 .service-info .info-content .column.three.right {
     width: 45%;
+}
+
+.service-info .info-content .column.two.left h2,
+.service-info .info-content .column.two.left p {
+    text-align: right;
 }
 
 /* # Customer Reviews for Individual Services # */
@@ -1374,67 +1385,13 @@ footer a:hover i {
 
 
 /* ### Responsive media styling ### */
-/*
 @media (max-width: 1300px) {
     .masthead .max-width {
-        margin-left: 0px;
+        margin-left: 0;
     }
 }
 
-@media (max-width: 1150px) {
-    .about .about-content .left img {
-        height: 325px;
-        width: 350px;
-    }
-
-    .services .services-content .serv-descr.active {
-        top: 0;
-        height: 90%;
-        width: 50%;
-        margin-left: 25%;
-        margin-right: 25%;
-        margin-top: 2%;
-    }
-
-    .events .events-content .left{
-        display: inline-block;
-        justify-content: center;
-        margin: 0 auto;
-        padding-left: 0;
-    }
-
-    .events .events-content .right{
-        padding-top: 25px;
-        display: inline-block;
-        justify-content: center;
-        margin: 0 auto;
-    }
-
-    .events .events-content .left:hover {
-        margin-top: 0px;
-    }
-
-    .events .events-content .right:hover {
-        margin-top: 0px;
-    }
-}
-
-@media (max-width: 991px) {
-    .max-width {
-        padding: 0 50px;
-    }
-
-    .services .services-content .serv-descr.active {
-        top: 0;
-        height: 90%;
-        width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-top: 2%;
-    }
-}
-
-@media (max-width: 947px) {
+@media (max-width: 1180px) {
     .max-width {
         padding: 0 50px;
     }
@@ -1454,7 +1411,7 @@ footer a:hover i {
         width: 100%;
         left: 100%;
         top: 0;
-        background: rgb(61,61,61);
+        background: rgb(61, 61, 61);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -1472,140 +1429,6 @@ footer a:hover i {
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
-    }
-
-    .masthead .masthead-content .text-2 {
-        font-size: 70px;
-    }
-
-    .masthead .masthead-content .text-3 {
-        font-size: 45px;
-    }
-
-    .masthead .masthead-content a {
-        font-size: 23px;
-        padding: 10px 30px;
-    }
-
-    .max-width {
-        max-width: 800px;
-    }
-
-    .about .about-content .column {
-        width: 100%;
-    }
-
-    .about .about-content .left {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-
-    .about .about-content .right {
-        flex: 100%;
-    }
-
-    .services .services-content .card {
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
-
-    .services .services-content .serv-descr.active {
-        top: 0;
-        height: 90%;
-        width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-top: 2%;
-    }
-
-    .contact .contact-content .column {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-}
-
-@media (max-width: 724px) {
-    .max-width {
-        padding: 0 23px;
-    }
-
-    .masthead .masthead-content .text-2 {
-        font-size: 60px;
-    }
-
-    .masthead .masthead-content .text-3 {
-        font-size: 35px;
-    }
-
-    .masthead .masthead-content a {
-        font-size: 20px;
-        padding: 9px 25px;
-    }
-
-    .services .services-content .card {
-        width: 100%;
-    }
-
-    .services .services-content .serv-descr.active {
-        top: 0;
-        height: 90%;
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 2%;
-    }
-}
-
-@media (max-width: 579px) {
-    .masthead .masthead-content .text-2 {
-        font-size: 50px;
-    }
-
-    .masthead .masthead-content .text-3 {
-        font-size: 25px;
-    }
-
-    .services .services-content .serv-descr.active {
-        top: 0;
-        height: 90%;
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 2%;
-    }
-}
-
-@media (max-width: 480px) {
-    .events .events-content .right img {
-        width: 420px;
-    }
-
-    .services .services-content .serv-descr .serv-descr-content i {
-        font-size: 100px;
-    }
-
-    .services .services-content .serv-descr .serv-descr-content h2 {
-        font-size: 33px;
-    }
-
-    .services .services-content .serv-descr .serv-descr-content a {
-        font-size: 17px;
-        padding: 12px 30px;
-    }
-
-    .services .services-content .serv-descr.active {
-        top: 0;
-        width: 86.5%;
-        left: -5%;
-        
-    }
-}
-*/
-
-@media (max-width: 1300px) {
-    .masthead .max-width {
-        margin-left: 0;
     }
 }
 
@@ -1649,6 +1472,26 @@ footer a:hover i {
         margin-left: 20%;
         margin-right: 20%;
         margin-top: 2%;
+    }
+
+    .events .events-content .left {
+        margin-bottom: 10%;
+    }
+
+    .testimonials .wrapper .testimonials-content {
+        width: 500px;
+    }
+
+    .testimonials .wrapper .testimonials-content .profile {
+        top: -16%;
+    }
+
+    .testimonials .wrapper .testimonials-content .profile h2 {
+        font-size: 20px;
+    }
+
+    .testimonials .wrapper .testimonials-content p {
+        font-size: 15px;
     }
 }
 
@@ -1714,23 +1557,31 @@ footer a:hover i {
         align-items: center;
     }
 
-    .about .about-content .column {
+    .about .about-content .column,
+    .service-info .info-content .column {
         width: 100%;
     }
 
-    .about .about-content .left {
+    .about .about-content .left,
+    .service-info .info-content .column.one.left,
+    .service-info .info-content .column.two.right,
+    .service-info .info-content .column.three.left {
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
     }
 
-    .about .about-content .left img {
+    .about .about-content .left img,
+    .service-info .info-content .column img {
         width: 100%; /* Ensure image takes full width */
         max-width: none; /* Remove max-width restriction */
         height: auto; /* Allow height to adjust proportionally */
     }
 
-    .about .about-content .right {
+    .about .about-content .right,
+    .service-info .info-content .column.one.right,
+    .service-info .info-content .column.two.left,
+    .service-info .info-content .column.three.right {
         flex: 100%;
     }
 
@@ -1796,6 +1647,27 @@ footer a:hover i {
     }
 }
 
+@media (max-width: 768px) {
+    .testimonials .testimonials-content {
+        width: 95%;
+        max-width: none;
+        margin: 20px auto;
+    }
+
+    .service-info .info-content .column.two.right {
+        order: 1;
+    }
+
+    .service-info .info-content .column.two.left {
+        order: 2;
+    }
+
+    .service-info .info-content .column img,
+    .service-info .info-content .column.two.right img {
+        box-shadow: none;
+    }
+}
+
 @media (max-width: 724px) {
     .max-width {
         padding: 0 23px;
@@ -1814,21 +1686,35 @@ footer a:hover i {
         padding: 9px 25px;
     }
 
-    .about .about-content {
+    .about .about-content,
+    .service-info .info-content {
         flex-direction: column;
     }
 
-    .about .about-content .left img {
+    .about .about-content .left img,
+    .service-info .info .column img {
         width: 100%; /* Ensure image takes full width */
         max-width: none; /* Remove max-width restriction */
         height: auto; /* Allow height to adjust proportionally */
         margin-bottom: 20px;
     }
 
-    .about .about-content .right {
+    .about .about-content .right,
+    .service-info .info-content .column.one.right,
+    .service-info .info-content .column.two.left,
+    .service-info .info-content .column.three.right {
         width: 100%; /* Ensure text content takes full width */
         max-width: none; /* Remove max-width restriction */
         margin-top: 20px; /* Add space between image and text */
+    }
+
+    .service-info .info-content .column.one.right h2,
+    .service-info .info-content .column.one.right p,
+    .service-info .info-content .column.two.left h2,
+    .service-info .info-content .column.two.left p,
+    .service-info .info-content .column.three.right h2,
+    .service-info .info-content .column.three.right p {
+        text-align: center;
     }
 
     .services .services-content .card {
@@ -1851,6 +1737,17 @@ footer a:hover i {
         width: auto; /* Allow images to scale down */
         margin: 0 auto; /* Center images horizontally */
         display: block; /* Remove default inline block spacing */
+    }
+
+    .testimonials {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .testimonials .max-width {
+        max-width: none;
     }
 
     footer .footer-content .other .contact-info,
@@ -1889,19 +1786,24 @@ footer a:hover i {
         font-size: 25px;
     }
 
-    .about .about-content .left img {
+    .about .about-content .left img,
+    .service-info .info-content .column img {
         width: 100%; /* Ensure image takes full width */
         max-width: none; /* Remove max-width restriction */
         height: auto; /* Allow height to adjust proportionally */
     }
 
-    .about .about-content .right {
+    .about .about-content .right,
+    .service-info .info-content .column.one.right,
+    .service-info .info-content .column.two.left,
+    .service-info .info-content .column.three.right {
         width: 100%; /* Ensure text content takes full width */
         max-width: none; /* Remove max-width restriction */
         margin-top: 20px; /* Add space between image and text */
     }
 
-    .about .about-content .right p {
+    .about .about-content .right p,
+    .service-info .info-content .column p {
         font-size: 16px; /* Adjust text size for better readability */
     }
 
@@ -1922,22 +1824,35 @@ footer a:hover i {
         margin: 0 auto; /* Center images horizontally */
         display: block; /* Remove default inline block spacing */
     }
+
+    .testimonials .wrapper .testimonials-content {
+        width: 400px;
+    }
+
+    .testimonials .wrapper .testimonials-content .profile {
+        top: -15%;
+    }
 }
 
 @media (max-width: 480px) {
-    .about .about-content .left img {
+    .about .about-content .left img
+    .service-info .info-content .column img {
         width: 100%; /* Ensure image takes full width */
         max-width: none; /* Remove max-width restriction */
         height: auto; /* Allow height to adjust proportionally */
     }
 
-    .about .about-content .right {
+    .about .about-content .right,
+    .service-info .info-content .column.one.right,
+    .service-info .info-content .column.two.left,
+    .service-info .info-content .column.three.right {
         width: 100%; /* Ensure text content takes full width */
         max-width: none; /* Remove max-width restriction */
         margin-top: 20px; /* Add space between image and text */
     }
 
-    .about .about-content .right p {
+    .about .about-content .right p,
+    .service-info .info-content .column p {
         font-size: 14px; /* Further adjust text size for smaller screens */
     }
 
@@ -1974,5 +1889,9 @@ footer a:hover i {
         top: 0;
         width: 86.5%;
         left: -5%;
+    }
+
+    .testimonials .wrapper .testimonials-content {
+        width: 350px;
     }
 }
