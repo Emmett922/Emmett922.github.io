@@ -23,22 +23,6 @@ $(document).ready(function() {
     });
 
 
-    // -- Owl Carousel Script -- //
-    $('.wrapper').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
-            }
-        }
-    });
-
-
-
     // -- Smooth Scrolling on Anchor Link Clicks -- //
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -53,42 +37,24 @@ $(document).ready(function() {
 
 
     // -- Toggle Menu/Navbar -- //
-    $('.menu-btn, .menu li a').click(function() {
+    $('.menu-btn').click(function() {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
+    $('.menu li a').click(function() {
+        var id = $(this).attr('id');
+        console.log(id);
+        if (id != 'services-link') {
+            $('.navbar .menu').toggleClass("active");
+            $('.menu-btn i').toggleClass("active");
+        }
+    });
 
     // -- Toggle Submenu -- //
-    $('#services-link, .services-submenu .services-submenu-link, .portfolio-nav .menu #services-link').click(function() {
+    $('#services-link a, .services-submenu .services-submenu-link, .portfolio-nav .menu #services-link').click(function() {
         $('.navbar .menu .services-submenu').toggleClass("active");
         $('.portfolio-nav .menu .services-submenu').toggleClass("active");
     });
-
-
-
-    // -- Cycle Background Images in Masthead -- //
-    // EXPERIENCING ISSUES!! //
-    /*
-    var images = ["images/soundbord.jpg", "images/mic&headset.jpg", "images/security_cam.jpg", "images/mic.jpg"],
-        index = 0,
-        count = -1,
-        $masthead = $('#masthead');
-
-    setInterval(function() {
-        $masthead.animate({ left: -100 }, function() {
-            if (count == 0) {
-                $masthead.css('background-image', 'linear-gradient(rgba(0,0,0,0.75), rgba(6,29,80,0.65)), url('+images[++index]+')');
-            } else {
-                $masthead.css('background-image', 'linear-gradient(rgba(0,0,0,0.75), rgba(6,29,80,0.65)), url('+images[index++]+')');
-                $masthead.animate({ left: 0}, function() {
-                    if(index == images.length) index = 0, count = 0;
-                });
-            }
-        });
-        count++;
-    }, 5000);
-    */
-
 
 
     // -- Typing Animation -- //
@@ -98,49 +64,6 @@ $(document).ready(function() {
         backSpeed: 60,
         loop: true
     })
-
-
-    // -- Removing this option -- //
-
-    // -- Toggle Services Description pop-up -- //
-    /*
-    // Opening pop-up
-    $('.services .services-content .card').click(function(event) {
-        $('.services .services-content .card').toggleClass("active");
-        $('.services .services-content .serv-descr').toggleClass("active");
-        $('.services .services-content .transparent-overlay').toggleClass("active");
-
-        // Description Content changes based on chosen card
-        if (event.currentTarget.id == 'surveillance') {
-            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-video');
-            $('.services .services-content .serv-descr .serv-descr-content h2').html('Surveillance');
-        }
-        if (event.currentTarget.id == 'home-theater') {
-            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-clapperboard');
-            $('.services .services-content .serv-descr .serv-descr-content h2').html('Home Theater');
-        }
-        if (event.currentTarget.id == 'audio-visual') {
-            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-headphones');
-            $('.services .services-content .serv-descr .serv-descr-content h2').html('Audio/Visual');
-        }
-        if (event.currentTarget.id == 'streaming') {
-            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-display');
-            $('.services .services-content .serv-descr .serv-descr-content h2').html('Streaming');
-        }
-        if (event.currentTarget.id == 'live-music') {
-            $('.services .services-content .serv-descr .serv-descr-content i').attr('class', 'fa-solid fa-music');
-            $('.services .services-content .serv-descr .serv-descr-content h2').html('Live Music');
-        }
-    });
-
-    // Closing pop-up
-    $('.services .services-content .serv-descr .close-btn, .services .services-content .serv-descr .serv-descr-content a').click(function() {
-        $('.services .services-content .card').toggleClass("active");
-        $('.services .services-content .serv-descr').toggleClass("active");
-        $('.services .services-content .transparent-overlay').toggleClass("active");
-    });
-    */
-
 
 
     // -- Redirecting to Other Sites -- //
@@ -154,21 +77,4 @@ $(document).ready(function() {
         window.open('https://www.eventbrite.com/e/music-moonlight-a-live-concert-under-the-stars-tickets-920150483867?utm_experiment=test_share_listing&aff=ebdsshios');
         return false;
     });
-
-    // -- Cycling through Images in Portfolio Gallery -- //
-    var slide_img = document.querySelector('.img-item');
-    var images = ['image0.jpeg', 'image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.jpeg',
-        'image5.jpeg', 'image6.jpeg', 'image7.jpeg', 'image8.jpeg', 'image9.jpeg',
-        'image10.jpeg', 'image11.jpeg', 'image12.jpeg', 'image13.jpeg'];
-    var i = 0;
-
-    document.querySelector('.gallery button').addEventListener('click', function() {
-        if (i >= images.length - 1) i = -1;
-        i++;
-        return setImage();
-    });
-
-    function setImage() {
-        return slide_img.setAttribute('src', 'images/' + images[i])
-    }
 });

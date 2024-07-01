@@ -19,9 +19,11 @@
 /* ### Navbar Styling ### */
 .navbar {
     position: fixed;
-    width: 100%;
+    top: 0; left: 0; right: 0;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
+    align-items: center;
+    justify-content: space-between;
     transition: all 0.3s ease;
     z-index: 999;
 }
@@ -29,6 +31,7 @@
 .portfolio-nav {
     background: rgb(0, 0, 100);
     position: fixed;
+    top: 0; left: 0; right: 0;
     width: 100%;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
@@ -108,19 +111,15 @@
 /* ## Submenu Styling ## */
 .navbar .menu .services-submenu,
 .portfolio-nav .menu .services-submenu {
-    left: 59.5%;
-    width: 8.1%;
-    opacity: 0;
     position: absolute;
-    visibility: hidden;
-    border-radius: 10px;
-    z-index: 999;
+    display: none;
+    width: 200px;
+    border-radius: 6px;
 }
 
 .navbar .menu .services-submenu li,
 .portfolio-nav .menu .services-submenu li {
     padding-bottom: 15px;
-    margin-left: -15px;
 }
 
 .navbar .menu .services-submenu.sticky,
@@ -130,28 +129,24 @@
 
 .navbar .menu li:hover .services-submenu,
 .portfolio-nav .menu li:hover .services-submenu {
-    opacity: 1;
     padding-top: 15px;
-    visibility: visible;
+    display: block;
 }
 
 .navbar .menu .services-submenu:hover,
 .portfolio-nav .menu .services-submenu:hover {
-    opacity: 1;
     padding-top: 15px;
-    visibility: visible;
+    display: block;
 }
 
 .navbar .menu .services-submenu.active {
-    opacity: 1;
     padding-top: 15px;
-    visibility: visible;
+    display: block;
 }
 
 .portfolio-nav .menu .services-submenu.active {
-    opacity: 1;
     padding-top: 15px;
-    visibility: visible;
+    display: block;
     background: rgb(0, 0, 100);
 }
 
@@ -692,11 +687,13 @@ section .title::after {
 
 .events .events-content .left .item {
     margin-top: -15px;
+    height: 600px;
+    width: 420px;
 }
 
 .events .events-content .left img {
-    height: 600px;
-    width: 420px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
@@ -747,11 +744,13 @@ section .title::after {
 
 .events .events-content .right .item {
     margin-top: -15px;
+    height: 600px;
+    width: 475px;
 }
 
 .events .events-content .right img {
-    height: 600px;
-    width: 475px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
@@ -798,12 +797,15 @@ section .title::after {
     background-color: rgb(242, 252, 255);
 }
 
+.testimonials .max-width {
+    max-width: 2000px;
+}
+
 .testimonials .title {
     margin-bottom: 7%;
 }
 
 .testimonials .wrapper {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -813,10 +815,10 @@ section .title::after {
 .testimonials .wrapper .testimonials-content {
     font-family: 'Poppins', sans-serif;
     position: relative;
-    width: 900px;
+    width: 600px;
     color: #fff;
     background: #222;
-    margin: 80px 125px;
+    margin: 80px 20px;
     padding: 30px 20px;
     overflow-inline: hidden;
     border-radius: 3px;
@@ -832,7 +834,7 @@ section .title::after {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -18%;
+    top: -15%;
     width: 100%;
     display: block;
 }
@@ -954,12 +956,12 @@ section .title::after {
 }
 
 .contact .contact-container {
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 .contact #contact-footer {
-    margin-bottom: -4.4%;
-    padding-top: 13%;
+    margin-bottom: -4.5%;
+    padding-top: 12%;
 }
 
 .contact .max-width {
@@ -1148,6 +1150,8 @@ section .title::after {
 #audio-visual-reviews,
 #streaming-reviews,
 #live-music-reviews {
+    margin: auto;
+    text-align: center;
     background: rgb(50,50,50);
     color: white;
 }
@@ -1160,11 +1164,11 @@ section .title::after {
     background-color: white;
 }
 
-#home-theater-reviews .wrapper a,
-#surveillance-reviews .wrapper a,
-#audio-visual-reviews .wrapper a,
-#streaming-reviews .wrapper a,
-#live-music-reviews .wrapper a {
+#home-theater-reviews a,
+#surveillance-reviews a,
+#audio-visual-reviews a,
+#streaming-reviews a,
+#live-music-reviews a {
     display: inline-block;
     background: none;
     color: white;
@@ -1177,11 +1181,11 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-#home-theater-reviews .wrapper a:hover,
-#surveillance-reviews .wrapper a:hover,
-#audio-visual-reviews .wrapper a:hover,
-#streaming-reviews .wrapper a:hover,
-#live-music-reviews .wrapper a:hover {
+#home-theater-reviews a:hover,
+#surveillance-reviews a:hover,
+#audio-visual-reviews a:hover,
+#streaming-reviews a:hover,
+#live-music-reviews a:hover {
     border: 2px solid rgb(37, 37, 255);
     background: rgb(37, 37, 255);
 }
@@ -1385,13 +1389,13 @@ footer a:hover i {
 
 
 /* ### Responsive media styling ### */
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
     .masthead .max-width {
         margin-left: 0;
     }
 }
 
-@media (max-width: 1180px) {
+@media screen and (max-width: 1180px) {
     .max-width {
         padding: 0 50px;
     }
@@ -1411,7 +1415,7 @@ footer a:hover i {
         width: 100%;
         left: 100%;
         top: 0;
-        background: rgb(61, 61, 61);
+        background-color: rgba(61, 61, 61, 0.9);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -1423,6 +1427,7 @@ footer a:hover i {
 
     .navbar .menu li {
         display: block;
+        position: relative;
     }
 
     .navbar .menu li a {
@@ -1430,9 +1435,30 @@ footer a:hover i {
         margin: 20px 0;
         font-size: 25px;
     }
+
+    .navbar .menu .services-submenu {
+        margin: auto;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .navbar .menu .services-submenu li {
+        text-align: center;
+    }
+
+    .navbar .menu .services-submenu li a {
+        font-size: 18px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .navbar .menu .services-submenu.sticky,
+    .navbar .menu .services-submenu.active.sticky {
+        background: none;
+    }
 }
 
-@media (max-width: 1150px) {
+@media screen and (max-width: 1150px) {
     .about .about-content .left img {
         height: 325px; /* Adjusted height */
         width: 350px; /* Adjusted width */
@@ -1460,7 +1486,7 @@ footer a:hover i {
     }
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
     .max-width {
         padding: 0 50px;
     }
@@ -1476,6 +1502,11 @@ footer a:hover i {
 
     .events .events-content .left {
         margin-bottom: 10%;
+    }
+
+    .events .events-content .left .item .event-link .hover-overlay,
+    .events .events-content .right .item .event-link .hover-overlay {
+        display: none;
     }
 
     .testimonials .wrapper .testimonials-content {
@@ -1495,7 +1526,7 @@ footer a:hover i {
     }
 }
 
-@media (max-width: 947px) {
+@media screen and (max-width: 947px) {
     .max-width {
         padding: 0 50px;
     }
@@ -1515,7 +1546,7 @@ footer a:hover i {
         width: 100%;
         left: 100%;
         top: 0;
-        background: rgb(61, 61, 61);
+        background-color: rgba(61, 61, 61, 0.9);
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -1533,6 +1564,11 @@ footer a:hover i {
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
+    }
+
+    .navbar .menu .services-submenu.sticky,
+    .navbar .menu .services-submenu.active.sticky {
+        background: none;
     }
 
     .masthead .masthead-content .text-2 {
@@ -1571,11 +1607,16 @@ footer a:hover i {
         margin: 0 auto 60px;
     }
 
-    .about .about-content .left img,
-    .service-info .info-content .column img {
+    .about .about-content .left img {
         width: 100%; /* Ensure image takes full width */
         max-width: none; /* Remove max-width restriction */
         height: auto; /* Allow height to adjust proportionally */
+    }
+
+    .service-info .info-content .column img {
+        max-width: none;
+        height: auto;
+        width: 500px;
     }
 
     .about .about-content .right,
@@ -1614,6 +1655,10 @@ footer a:hover i {
         padding-right: 0;
     }
 
+    .testimonials .max-width {
+        max-width: none;
+    }
+
     .contact .contact-content .column {
         width: 100%;
         margin-bottom: 35px;
@@ -1647,7 +1692,7 @@ footer a:hover i {
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .testimonials .testimonials-content {
         width: 95%;
         max-width: none;
@@ -1668,7 +1713,7 @@ footer a:hover i {
     }
 }
 
-@media (max-width: 724px) {
+@media screen and (max-width: 724px) {
     .max-width {
         padding: 0 23px;
     }
@@ -1732,7 +1777,8 @@ footer a:hover i {
 
     .events .events-content .left img,
     .events .events-content .right img {
-        height: auto; /* Ensure images scale proportionally */
+        height: 100%; /* Ensure images scale proportionally */
+        max-height: 100%;
         max-width: 100%; /* Ensure images fit within container */
         width: auto; /* Allow images to scale down */
         margin: 0 auto; /* Center images horizontally */
@@ -1777,7 +1823,11 @@ footer a:hover i {
     }
 }
 
-@media (max-width: 579px) {
+@media screen and (max-width: 579px) {
+    .navbar .logo a {
+        font-size: 30px;
+    }
+
     .masthead .masthead-content .text-2 {
         font-size: 50px;
     }
@@ -1791,6 +1841,12 @@ footer a:hover i {
         width: 100%; /* Ensure image takes full width */
         max-width: none; /* Remove max-width restriction */
         height: auto; /* Allow height to adjust proportionally */
+    }
+
+    .service-info .info-content .column img {
+        width: 400px;
+        max-width: none;
+        height: auto;
     }
 
     .about .about-content .right,
@@ -1818,7 +1874,8 @@ footer a:hover i {
 
     .events .events-content .left img,
     .events .events-content .right img {
-        height: auto; /* Ensure images scale proportionally */
+        height: 100%; /* Ensure images scale proportionally */
+        max-height: 100%;
         max-width: 100%; /* Ensure images fit within container */
         width: auto; /* Allow images to scale down */
         margin: 0 auto; /* Center images horizontally */
@@ -1834,7 +1891,7 @@ footer a:hover i {
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .about .about-content .left img
     .service-info .info-content .column img {
         width: 100%; /* Ensure image takes full width */
@@ -1893,5 +1950,11 @@ footer a:hover i {
 
     .testimonials .wrapper .testimonials-content {
         width: 350px;
+    }
+
+    .service-info .info-content .column img {
+        width: 300px;
+        max-width: none;
+        height: auto;
     }
 }
