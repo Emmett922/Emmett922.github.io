@@ -98,11 +98,6 @@
     color: rgb(74, 74, 243);
 }
 
-.navbar .menu li a:hover i {
-    transition: 0.1s;
-    transform: rotate(180deg);
-}
-
 .navbar.sticky .menu li a:hover,
 .portfolio-nav .menu li a:hover {
     color: white;
@@ -115,6 +110,10 @@
     display: none;
     width: 200px;
     border-radius: 6px;
+}
+
+.portfolio-nav .menu .services-submenu {
+    background: rgb(0, 0, 100);
 }
 
 .navbar .menu .services-submenu li,
@@ -147,7 +146,6 @@
 .portfolio-nav .menu .services-submenu.active {
     padding-top: 15px;
     display: block;
-    background: rgb(0, 0, 100);
 }
 
 .navbar .menu .services-submenu.active.sticky {
@@ -360,7 +358,6 @@ footer {
 .about
 .about-content,
 .services .services-content,
-.events .events-content,
 .contact .contact-content,
 .service-info .info-content {
     display: flex;
@@ -531,111 +528,13 @@ section .title::after {
     font-size: 15px;
 }
 
-/* ## Services Description Styling ## */
-.services .services-content .transparent-overlay {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: -100%;
-    left: 0;
-    z-index: 1000;
-    background: rgba(0,0,0,.3);
-    text-align: center;
-    transition: all 0.5s ease;
-}
-
-.services .services-content .serv-descr {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: -100%;
-    z-index: 1001;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-    text-align: center;
-    transition: all 0.5s ease;
-    border-radius: 10px;
-}
-
-.services .services-content .card.active {
-    pointer-events: none;
-}
-
-.services .services-content .transparent-overlay.active {
-    top: 0;
-}
-
-.services .services-content .serv-descr.active {
-    top: 0;
-    height: 90%;
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 2%;
-}
-
-.services .services-content .serv-descr .close-btn {
-    pointer-events: all;
-    cursor: pointer;
-    font-size: 40px;
-    color: black;
-    float: right;
-    margin-right: 10px;
-}
-
-.services .services-content .serv-descr .serv-descr-content {
-    padding-top: 100px;
-    text-align: center;
-}
-
-.services .services-content .serv-descr .serv-descr-content i {
-    font-size: 150px;
-    color: darkblue;
-}
-
-.services .services-content .serv-descr .serv-descr-content h2 {
-    font-size: 50px;
-    font-weight: 600;
-    font-family: 'Poppins', sans-serif;
-    color: black;
-}
-
-.services .services-content .serv-descr .serv-descr-content .descr {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.services .services-content .serv-descr .serv-descr-content p {
-    color: black;
-}
-
-.services .services-content .serv-descr .serv-descr-content a {
-    display: inline-block;
-    background: none;
-    color: black;
-    font-size: 25px;
-    padding: 12px 36px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid black;
-    transition: all 0.5s ease;
-}
-
-.services .services-content .serv-descr .serv-descr-content a:hover {
-    color: white;
-    background: rgb(37, 37, 255);
-    border: 2px solid rgb(37, 37, 255);
-}
-
-
 
 /* ### Portfolio Section Styling ### */
 .portfolio {
-    background-color: rgb(242, 252, 255);
+    background-color: rgb(50,50,50);
     text-align: center;
     background-size: cover;
+    color: white;
 }
 
 .portfolio h3 {
@@ -646,13 +545,13 @@ section .title::after {
 .portfolio .portfolio-btns a {
     display: inline-block;
     background: none;
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: 500;
     padding: 15px 25px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid black;
+    border: 2px solid white;
     transition: all 0.3s ease-in-out;
 }
 
@@ -668,30 +567,32 @@ section .title::after {
 
 /* ### Events Section Styling ### */
 .events {
-    background-color: rgb(50,50,50);
-    color: white;
+    background-color: rgb(242, 252, 255);
 }
 
 .events .title::before {
-    background: white;
+    background: black;
 }
 
 
 /* Left Column */
-.events .events-content .left {
+.events .events-content {
+    margin: auto;
+    align-items: center;
     text-align: center;
     cursor: pointer;
-    padding-left: 53px;
     transition: all 0.1s ease;
 }
 
-.events .events-content .left .item {
+.events .events-content .item {
+    margin: auto;
+    text-align: center;
     margin-top: -15px;
-    height: 600px;
-    width: 420px;
+    height: 500px;
+    width: 800px;
 }
 
-.events .events-content .left img {
+.events .events-content img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -699,11 +600,11 @@ section .title::after {
     cursor: pointer;
 }
 
-.events .events-content .left .item .event-link .hover-overlay {
+.events .events-content .item .event-link .hover-overlay {
     display: flex;
     position: absolute;
-    height: 600px;
-    width: 420px;
+    height: 500px;
+    width: 800px;
     background-image: linear-gradient(to top, rgba(0,0,255,0.65) 0%, rgba(0,0,139,0.65) 100%);
     align-items: center;
     border-radius: 10px;
@@ -711,7 +612,7 @@ section .title::after {
     transition: opacity ease-in-out 0.3s;
 }
 
-.events .events-content .left .item .event-link .hover-overlay .overlay-content {
+.events .events-content .item .event-link .hover-overlay .overlay-content {
     display: inline-block;
     text-align: center;
     margin: 0 auto;
@@ -725,11 +626,7 @@ section .title::after {
     transition: all 0.1s ease;
 }
 
-.events .events-content .left:hover {
-    margin-top: -50px;
-}
-
-.events .events-content .left .item .event-link .hover-overlay:hover {
+.events .events-content .item .event-link .hover-overlay:hover {
     opacity: 1;
 }
 
@@ -1409,7 +1306,8 @@ footer a:hover i {
         content: "\f00d";
     }
 
-    .navbar .menu {
+    .navbar .menu,
+    .portfolio-nav .menu {
         position: fixed;
         height: 100vh;
         width: 100%;
@@ -1421,39 +1319,46 @@ footer a:hover i {
         transition: all 0.3s ease;
     }
 
-    .navbar .menu.active {
+    .navbar .menu.active,
+    .portfolio-nav .menu.active {
         left: 0;
     }
 
-    .navbar .menu li {
+    .navbar .menu li,
+    .portfolio-nav .menu li {
         display: block;
         position: relative;
     }
 
-    .navbar .menu li a {
+    .navbar .menu li a,
+    .portfolio-nav .menu li a {
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
     }
 
-    .navbar .menu .services-submenu {
+    .navbar .menu .services-submenu,
+    .portfolio-nav .menu .services-submenu {
         margin: auto;
         position: relative;
         padding-bottom: 20px;
     }
 
-    .navbar .menu .services-submenu li {
+    .navbar .menu .services-submenu li,
+    .portfolio-nav .menu .services-submenu li {
         text-align: center;
     }
 
-    .navbar .menu .services-submenu li a {
+    .navbar .menu .services-submenu li a,
+    .portfolio-nav .menu .services-submenu li a {
         font-size: 18px;
         text-align: center;
         display: inline-block;
     }
 
     .navbar .menu .services-submenu.sticky,
-    .navbar .menu .services-submenu.active.sticky {
+    .navbar .menu .services-submenu.active.sticky,
+    .portfolio-nav .menu .services-submenu {
         background: none;
     }
 }
@@ -1484,6 +1389,33 @@ footer a:hover i {
     .events .events-content .right:hover {
         margin-top: 0;
     }
+
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-content .other {
+        margin-top: 20px;
+    }
+
+    footer .footer-content .other .contact-info,
+    footer .footer-content .other .services,
+    footer .footer-content .other .home,
+    footer .footer-content .other .footer-contact {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    footer .footer-content .other .footer-contact a {
+        font-size: 18px; /* Decrease font size for smaller screens */
+        padding: 10px 30px; /* Adjust padding */
+        margin-top: 15px; /* Adjust margin top */
+    }
+
+    footer img {
+        height: 150px; /* Adjust height for smaller screens */
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -1500,6 +1432,13 @@ footer a:hover i {
         margin-top: 2%;
     }
 
+    .events .events-content .item,
+    .events .events-content .item .event-link .hover-overlay {
+        height: 400px;
+        width: 700px;
+    }
+
+    /*
     .events .events-content .left {
         margin-bottom: 10%;
     }
@@ -1508,6 +1447,7 @@ footer a:hover i {
     .events .events-content .right .item .event-link .hover-overlay {
         display: none;
     }
+    */
 
     .testimonials .wrapper .testimonials-content {
         width: 500px;
@@ -1540,7 +1480,8 @@ footer a:hover i {
         content: "\f00d";
     }
 
-    .navbar .menu {
+    .navbar .menu,
+    .portfolio-nav .menu {
         position: fixed;
         height: 100vh;
         width: 100%;
@@ -1552,22 +1493,26 @@ footer a:hover i {
         transition: all 0.3s ease;
     }
 
-    .navbar .menu.active {
+    .navbar .menu.active,
+    .portfolio-nav .menu.active {
         left: 0;
     }
 
-    .navbar .menu li {
+    .navbar .menu li,
+    .portfolio-nav .menu li {
         display: block;
     }
 
-    .navbar .menu li a {
+    .navbar .menu li a,
+    .portfolio-nav .menu li a {
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
     }
 
     .navbar .menu .services-submenu.sticky,
-    .navbar .menu .services-submenu.active.sticky {
+    .navbar .menu .services-submenu.active.sticky,
+    .portfolio-nav .menu .services-submenu {
         background: none;
     }
 
@@ -1692,6 +1637,14 @@ footer a:hover i {
     }
 }
 
+@media screen and (max-width: 800px) {
+    .events .events-content .item,
+    .events .events-content .item .event-link .hover-overlay {
+        height: 350px;
+        width: 600px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .testimonials .testimonials-content {
         width: 95%;
@@ -1720,6 +1673,10 @@ footer a:hover i {
 
     .masthead .masthead-content .text-2 {
         font-size: 60px;
+    }
+
+    #masthead-portfolio .masthead-content .text-2 {
+        font-size: 80px;
     }
 
     .masthead .masthead-content .text-3 {
@@ -1823,13 +1780,26 @@ footer a:hover i {
     }
 }
 
+@media screen and (max-width: 650px) {
+    .events .events-content .item,
+    .events .events-content .item .event-link .hover-overlay {
+        height: 300px;
+        width: 500px;
+    }
+}
+
 @media screen and (max-width: 579px) {
-    .navbar .logo a {
+    .navbar .logo a,
+    .portfolio-nav .logo a {
         font-size: 30px;
     }
 
     .masthead .masthead-content .text-2 {
         font-size: 50px;
+    }
+
+    #masthead-portfolio .masthead-content .text-2 {
+        font-size: 60px;
     }
 
     .masthead .masthead-content .text-3 {
@@ -1891,6 +1861,14 @@ footer a:hover i {
     }
 }
 
+@media screen and (max-width: 550px) {
+    .events .events-content .item,
+    .events .events-content .item .event-link .hover-overlay {
+        height: 280px;
+        width: 400px;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .about .about-content .left img
     .service-info .info-content .column img {
@@ -1913,21 +1891,27 @@ footer a:hover i {
         font-size: 14px; /* Further adjust text size for smaller screens */
     }
 
-    .events .events-content .right img {
-        width: 420px; /* Adjusted width */
+    .events .events-content .item,
+    .events .events-content .item .event-link .hover-overlay {
+        height: 250px;
+        width: 350px;
     }
 
+    /*
     .events .events-content .left img {
-        width: 100%; /* Ensure image takes full width */
-        max-width: none; /* Remove max-width restriction */
-        height: auto; /* Allow height to adjust proportionally */
+        width: 100%;
+        max-width: none;
+        height: auto;
     }
 
     .events .events-content .right img {
-        width: 100%; /* Ensure image takes full width */
-        max-width: none; /* Remove max-width restriction */
-        height: auto; /* Allow height to adjust proportionally */
+        margin: 0;
+        text-align: center;
+        width: 440px;
+        max-width: none;
+        height: auto;
     }
+    */
 
     .services .services-content .serv-descr .serv-descr-content i {
         font-size: 100px;
@@ -1950,6 +1934,36 @@ footer a:hover i {
 
     .testimonials .wrapper .testimonials-content {
         width: 350px;
+    }
+
+    .service-info .info-content .column img {
+        width: 300px;
+        max-width: none;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .events .events-content {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    .events .events-content .left img {
+        margin: 0;
+        text-align: center;
+        width: 380px; /* Ensure image takes full width */
+        max-width: none; /* Remove max-width restriction */
+        height: auto; /* Allow height to adjust proportionally */
+    }
+
+    .events .events-content .right img {
+        margin: 0;
+        text-align: center;
+        width: 380px; /* Ensure image takes full width */
+        max-width: none; /* Remove max-width restriction */
+        height: auto;
     }
 
     .service-info .info-content .column img {

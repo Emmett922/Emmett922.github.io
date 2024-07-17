@@ -39,6 +39,7 @@ $(document).ready(function() {
     // -- Toggle Menu/Navbar -- //
     $('.menu-btn').click(function() {
         $('.navbar .menu').toggleClass("active");
+        $('.portfolio-nav .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
     $('.menu li a').click(function() {
@@ -46,12 +47,14 @@ $(document).ready(function() {
         console.log(id);
         if (id != 'services-link') {
             $('.navbar .menu').toggleClass("active");
+            $('.portfolio-nav .menu').toggleClass("active");
             $('.menu-btn i').toggleClass("active");
         }
     });
 
+
     // -- Toggle Submenu -- //
-    $('#services-link a, .services-submenu .services-submenu-link, .portfolio-nav .menu #services-link').click(function() {
+    $('#services-link a, .services-submenu .services-submenu-link').click(function() {
         $('.navbar .menu .services-submenu').toggleClass("active");
         $('.portfolio-nav .menu .services-submenu').toggleClass("active");
     });
