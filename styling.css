@@ -14,6 +14,10 @@
     margin: auto;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 
 
 /* ### Navbar Styling ### */
@@ -201,6 +205,8 @@
     background-image: linear-gradient(rgba(0,0,0,0.75), rgba(6, 29, 80, 0.65)), url('images/soundbord.jpg');
     background-size: cover;
     background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
     height: 100vh;
     color: white;
     min-height: 500px;
@@ -853,7 +859,7 @@ section .title::after {
 }
 
 .contact .contact-container {
-    margin-top: 7%;
+    margin-top: 8%;
 }
 
 .contact #contact-footer {
@@ -1014,7 +1020,7 @@ section .title::after {
 }
 
 .service-info .info-content .column img {
-    height: 500px;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 20px;
@@ -1131,7 +1137,9 @@ section .title::after {
 .projects {
     background-color: rgb(242, 252, 255);
     font-family: "Poppins", sans-serif;
+    margin: auto;
     margin-top: -12%;
+    text-align: center;
 }
 
 .projects .max-width {
@@ -1153,7 +1161,7 @@ section .title::after {
 }
 
 .projects .projects-list .project img {
-    height: 400px;
+    height: 100%;
     width: 100%;
     border-radius: 10px;
     display: block;
@@ -1286,6 +1294,12 @@ footer a:hover i {
 
 
 /* ### Responsive media styling ### */
+@media screen and (max-width: 1500px) {
+    .service-info .info-content {
+        width: calc(100% - 10px);
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .masthead .max-width {
         margin-left: 0;
@@ -1432,10 +1446,13 @@ footer a:hover i {
         margin-top: 2%;
     }
 
-    .events .events-content .item,
+    .events .events-content .item {
+        height: auto;
+        width: calc(100% - 30px);
+    }
+
     .events .events-content .item .event-link .hover-overlay {
-        height: 400px;
-        width: 700px;
+        display: none;
     }
 
     /*
@@ -1463,6 +1480,18 @@ footer a:hover i {
 
     .testimonials .wrapper .testimonials-content p {
         font-size: 15px;
+    }
+
+    .projects .projects-list {
+        display: block;
+    }
+
+    .projects .projects-list .project {
+        text-align: center;
+        margin: auto;
+        width: calc(100% - 50px);
+        height: auto;
+        margin-bottom: 5%;
     }
 }
 
@@ -1538,8 +1567,7 @@ footer a:hover i {
         align-items: center;
     }
 
-    .about .about-content .column,
-    .service-info .info-content .column {
+    .about .about-content .column {
         width: 100%;
     }
 
@@ -1558,17 +1586,59 @@ footer a:hover i {
         height: auto; /* Allow height to adjust proportionally */
     }
 
-    .service-info .info-content .column img {
-        max-width: none;
-        height: auto;
-        width: 500px;
+    .service-info .info-content .column.two.right {
+        order: 1;
     }
 
-    .about .about-content .right,
+    .service-info .info-content .column.two.left {
+        order: 2;
+    }
+
+    .service-info .info-content .column {
+        width: 100%;
+    }
+
+    .service-info .info-content .column img,
+    .service-info .info-content .column.two.right img {
+        box-shadow: none;
+    }
+
+    .service-info .info-content {
+        flex-direction: column;
+    }
+
+    .service-info .info .column img {
+        width: 100%;
+        max-width: none; /* Remove max-width restriction */
+        height: auto; /* Allow height to adjust proportionally */
+        margin-bottom: 20px;
+    }
+
+    .service-info .info-content .column img {
+        width: 550px;
+        max-width: none;
+        height: auto;
+    }
+
+    .about .about-content .right {
+        flex: 100%;
+    }
+
     .service-info .info-content .column.one.right,
     .service-info .info-content .column.two.left,
     .service-info .info-content .column.three.right {
-        flex: 100%;
+        width: 100%; /* Ensure text content takes full width */
+        max-width: none; /* Remove max-width restriction */
+        margin-top: 20px; /* Add space between image and text */
+    }
+
+    .service-info .info-content .column.one.right h2,
+    .service-info .info-content .column.one.right p,
+    .service-info .info-content .column.two.left h2,
+    .service-info .info-content .column.two.left p,
+    .service-info .info-content .column.three.right h2,
+    .service-info .info-content .column.three.right p {
+        text-align: center;
     }
 
     .services .services-content .card {
@@ -1583,21 +1653,6 @@ footer a:hover i {
         margin-left: 20%;
         margin-right: 20%;
         margin-top: 2%;
-    }
-
-    .events .events-content .left img,
-    .events .events-content .right img {
-        height: auto; /* Ensure images scale proportionally */
-        max-width: 100%; /* Ensure images fit within container */
-        width: auto; /* Allow images to scale down */
-        margin: 0 auto; /* Center images horizontally */
-        display: block; /* Remove default inline block spacing */
-    }
-
-    .events .events-content .left,
-    .events .events-content .right {
-        padding-left: 0;
-        padding-right: 0;
     }
 
     .testimonials .max-width {
@@ -1634,14 +1689,6 @@ footer a:hover i {
 
     footer img {
         height: 150px; /* Adjust height for smaller screens */
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .events .events-content .item,
-    .events .events-content .item .event-link .hover-overlay {
-        height: 350px;
-        width: 600px;
     }
 }
 
@@ -1732,16 +1779,6 @@ footer a:hover i {
         margin-top: 2%;
     }
 
-    .events .events-content .left img,
-    .events .events-content .right img {
-        height: 100%; /* Ensure images scale proportionally */
-        max-height: 100%;
-        max-width: 100%; /* Ensure images fit within container */
-        width: auto; /* Allow images to scale down */
-        margin: 0 auto; /* Center images horizontally */
-        display: block; /* Remove default inline block spacing */
-    }
-
     .testimonials {
         display: flex;
         justify-content: center;
@@ -1778,13 +1815,9 @@ footer a:hover i {
         padding: 8px 25px; /* Adjust padding */
         margin-top: 10px; /* Adjust margin top */
     }
-}
 
-@media screen and (max-width: 650px) {
-    .events .events-content .item,
-    .events .events-content .item .event-link .hover-overlay {
-        height: 300px;
-        width: 500px;
+    .projects {
+        margin-top: -30%;
     }
 }
 
@@ -1842,16 +1875,6 @@ footer a:hover i {
         margin-top: 2%;
     }
 
-    .events .events-content .left img,
-    .events .events-content .right img {
-        height: 100%; /* Ensure images scale proportionally */
-        max-height: 100%;
-        max-width: 100%; /* Ensure images fit within container */
-        width: auto; /* Allow images to scale down */
-        margin: 0 auto; /* Center images horizontally */
-        display: block; /* Remove default inline block spacing */
-    }
-
     .testimonials .wrapper .testimonials-content {
         width: 400px;
     }
@@ -1859,17 +1882,27 @@ footer a:hover i {
     .testimonials .wrapper .testimonials-content .profile {
         top: -15%;
     }
+
+    .projects {
+        margin-top: -40%;
+    }
 }
 
-@media screen and (max-width: 550px) {
-    .events .events-content .item,
-    .events .events-content .item .event-link .hover-overlay {
-        height: 280px;
-        width: 400px;
+@media screen and (max-width: 500px) {
+    .projects {
+        margin-top: -50%;
     }
 }
 
 @media screen and (max-width: 480px) {
+    #masthead-surveillance .masthead-content .text-2 {
+        font-size: 40px;
+    }
+
+    #masthead-surveillance .masthead-content .text-1 {
+        font-size: 25px;
+    }
+
     .about .about-content .left img
     .service-info .info-content .column img {
         width: 100%; /* Ensure image takes full width */
@@ -1890,28 +1923,6 @@ footer a:hover i {
     .service-info .info-content .column p {
         font-size: 14px; /* Further adjust text size for smaller screens */
     }
-
-    .events .events-content .item,
-    .events .events-content .item .event-link .hover-overlay {
-        height: 250px;
-        width: 350px;
-    }
-
-    /*
-    .events .events-content .left img {
-        width: 100%;
-        max-width: none;
-        height: auto;
-    }
-
-    .events .events-content .right img {
-        margin: 0;
-        text-align: center;
-        width: 440px;
-        max-width: none;
-        height: auto;
-    }
-    */
 
     .services .services-content .serv-descr .serv-descr-content i {
         font-size: 100px;
@@ -1941,29 +1952,23 @@ footer a:hover i {
         max-width: none;
         height: auto;
     }
+
+    .projects {
+        margin-top: -50%;
+    }
 }
 
 @media screen and (max-width: 420px) {
-    .events .events-content {
-        display: block;
-        margin: auto;
-        text-align: center;
+    #masthead-surveillance .masthead-content .text-2 {
+        font-size: 35px;
     }
 
-    .events .events-content .left img {
-        margin: 0;
-        text-align: center;
-        width: 380px; /* Ensure image takes full width */
-        max-width: none; /* Remove max-width restriction */
-        height: auto; /* Allow height to adjust proportionally */
+    #masthead-surveillance .masthead-content .text-1 {
+        font-size: 20px;
     }
 
-    .events .events-content .right img {
-        margin: 0;
-        text-align: center;
-        width: 380px; /* Ensure image takes full width */
-        max-width: none; /* Remove max-width restriction */
-        height: auto;
+    .masthead .masthead-content .text-2 {
+        font-size: 40px;
     }
 
     .service-info .info-content .column img {
