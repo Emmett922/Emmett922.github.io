@@ -479,6 +479,42 @@ section .title::after {
 
 
 
+/* ### Partners Section Styling ### */
+.partners {
+    background-color: rgb(242, 252, 255);
+    padding: 60px 0;
+}
+
+.partners .max-width {
+    max-width: 19000px;
+}
+
+.partners .title {
+    color: grey;
+    font-size: 25px;
+}
+
+.partners .title::before {
+    background: grey;
+    width: 120px;
+}
+
+.partners .partners-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 5fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+.partners .partners-list .partner img {
+    width: 100%;
+    height: auto;
+}
+
+
+
 /* ### Services Section Styling ### */
 .services {
     background-color: rgb(50,50,50);
@@ -1025,6 +1061,7 @@ section .title::after {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 97, 0.9) -80px -80px;
+    background: transparent;
 }
 
 .service-info .info-content .column.two.right img {
@@ -1975,5 +2012,24 @@ footer a:hover i {
         width: 300px;
         max-width: none;
         height: auto;
+    }
+
+    .testimonials .wrapper .testimonials-content {
+        width: calc(100% - 10px);
+    }
+
+    .testimonials .wrapper .testimonials-content .profile {
+        top: -12%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar .logo a,
+    .portfolio-nav .logo a {
+        font-size: 25px;
+    }
+
+    .testimonials .wrapper .testimonials-content .profile {
+        top: -10%;
     }
 }
